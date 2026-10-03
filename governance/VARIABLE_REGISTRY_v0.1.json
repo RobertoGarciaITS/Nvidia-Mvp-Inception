@@ -1,0 +1,192 @@
+{
+  "artifact_id": "HIP-GOV-VARIABLES-001",
+  "version": "0.1",
+  "status": "BASELINE",
+  "purpose": "Canonical registry of important project variables, their type, current value/status, owner and source of truth.",
+  "variables": [
+    {
+      "name": "project_name",
+      "category": "identity",
+      "type": "string",
+      "value": "Human Intelligence Platform",
+      "status": "DEFINED",
+      "source_of_truth": "README.md"
+    },
+    {
+      "name": "repository",
+      "category": "identity",
+      "type": "string",
+      "value": "RobertoGarciaITS/Nvidia-Mvp-Inception",
+      "status": "DEFINED",
+      "source_of_truth": "README.md"
+    },
+    {
+      "name": "north_star",
+      "category": "product",
+      "type": "string",
+      "value": "Verified Human Progress",
+      "status": "HYPOTHESIS",
+      "source_of_truth": "README.md"
+    },
+    {
+      "name": "human_twin_core",
+      "category": "architecture",
+      "type": "object",
+      "value": [
+        "Identity",
+        "State",
+        "Context",
+        "Goals",
+        "Events"
+      ],
+      "status": "BASELINE",
+      "source_of_truth": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json"
+    },
+    {
+      "name": "domain_twins",
+      "category": "architecture",
+      "type": "array",
+      "value": [
+        "Education Twin",
+        "Professional Twin",
+        "Worker Twin",
+        "Athlete Twin",
+        "Care Twin"
+      ],
+      "status": "BASELINE",
+      "source_of_truth": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json"
+    },
+    {
+      "name": "agents",
+      "category": "architecture",
+      "type": "array",
+      "value": [
+        "Tutor Agent",
+        "Career Agent",
+        "Safety Agent",
+        "Coach Agent",
+        "Care Agent"
+      ],
+      "status": "BASELINE",
+      "source_of_truth": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json"
+    },
+    {
+      "name": "mvp_domain_view_count",
+      "category": "mvp",
+      "type": "integer",
+      "value": 1,
+      "status": "BASELINE",
+      "source_of_truth": "governance/PROJECT_SCOPE_v0.1.md"
+    },
+    {
+      "name": "mvp_agent_count",
+      "category": "mvp",
+      "type": "integer",
+      "value": 1,
+      "status": "BASELINE",
+      "source_of_truth": "governance/PROJECT_SCOPE_v0.1.md"
+    },
+    {
+      "name": "initial_beachhead",
+      "category": "business",
+      "type": "string",
+      "value": null,
+      "status": "TO_BE_VALIDATED",
+      "source_of_truth": "governance/PROJECT_SCOPE_v0.1.md"
+    },
+    {
+      "name": "initial_buyer",
+      "category": "business",
+      "type": "string",
+      "value": null,
+      "status": "TO_BE_VALIDATED",
+      "source_of_truth": "future business/customer evidence"
+    },
+    {
+      "name": "initial_pricing_unit",
+      "category": "business",
+      "type": "string",
+      "value": null,
+      "status": "TO_BE_VALIDATED",
+      "source_of_truth": "future business model evidence"
+    },
+    {
+      "name": "tam",
+      "category": "market",
+      "type": "number",
+      "value": null,
+      "status": "TO_BE_RESEARCHED",
+      "source_of_truth": "future market model"
+    },
+    {
+      "name": "sam",
+      "category": "market",
+      "type": "number",
+      "value": null,
+      "status": "TO_BE_RESEARCHED",
+      "source_of_truth": "future market model"
+    },
+    {
+      "name": "som",
+      "category": "market",
+      "type": "number",
+      "value": null,
+      "status": "TO_BE_RESEARCHED",
+      "source_of_truth": "future market model"
+    },
+    {
+      "name": "nvidia_inception_track",
+      "category": "nvidia",
+      "type": "boolean",
+      "value": true,
+      "status": "ACTIVE_TRACK",
+      "source_of_truth": "README.md"
+    },
+    {
+      "name": "nvidia_dependency_required_for_product",
+      "category": "nvidia",
+      "type": "boolean",
+      "value": false,
+      "status": "BASELINE",
+      "source_of_truth": "governance/PROJECT_SCOPE_v0.1.md"
+    },
+    {
+      "name": "nvidia_workloads_validated",
+      "category": "nvidia",
+      "type": "array",
+      "value": [],
+      "status": "NONE_YET",
+      "source_of_truth": "future benchmarks / POCs"
+    },
+    {
+      "name": "architecture_baseline_version",
+      "category": "architecture",
+      "type": "string",
+      "value": "0.1",
+      "status": "BASELINE",
+      "source_of_truth": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json"
+    },
+    {
+      "name": "current_phase",
+      "category": "roadmap",
+      "type": "string",
+      "value": "P00 Foundation / Governance",
+      "status": "ACTIVE",
+      "source_of_truth": "governance/PROJECT_SCOPE_v0.1.md"
+    },
+    {
+      "name": "next_phase",
+      "category": "roadmap",
+      "type": "string",
+      "value": "P01 Problem + Beachhead Validation",
+      "status": "NEXT",
+      "source_of_truth": "governance/PROJECT_SCOPE_v0.1.md"
+    }
+  ],
+  "rules": [
+    "Null is preferred over invented values.",
+    "Every material variable must point to a source of truth.",
+    "A variable changes status only when evidence or a governed decision supports the change.",
+    "Agents must not fill market, traction, customer or benchmark variables from inference alone."
+  ]
+}
