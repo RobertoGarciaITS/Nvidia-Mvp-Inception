@@ -1,0 +1,104 @@
+{
+  "artifact_id": "HIP-GOV-TAXONOMY-001",
+  "version": "0.1",
+  "status": "BASELINE",
+  "purpose": "Provide stable categories and identifiers so humans and agents classify concepts, files, claims and work consistently.",
+  "prefixes": {
+    "GOV": "Governance and operating rules",
+    "ARCH": "Architecture and system boundaries",
+    "TWIN": "Human Digital Twin core concepts",
+    "EVID": "Evidence and provenance",
+    "CAP": "Capability and competency model",
+    "DOMAIN": "Permissioned domain views / twins",
+    "AGENT": "AI agents and agent workflows",
+    "DATA": "Data sources, schemas and ingestion",
+    "PRIV": "Trust, privacy, consent and access",
+    "EXP": "Experiments and prototypes",
+    "BENCH": "Benchmarks and evaluations",
+    "RES": "Research and external sources",
+    "BIZ": "Business model, customer and market",
+    "PITCH": "Pitch-deck and application communication",
+    "NVIDIA": "NVIDIA Inception and NVIDIA workload evaluation",
+    "ROAD": "Roadmap, milestones and gates",
+    "MEM": "Agent memory and context routing",
+    "ASSET": "Visual and presentation assets",
+    "TEST": "Tests and quality assurance"
+  },
+  "canonical_entities": {
+    "platform": "Human Intelligence Platform",
+    "core": "Human Digital Twin Core",
+    "graphs": [
+      "Evidence Graph",
+      "Capability Graph"
+    ],
+    "domains": [
+      "Education Twin",
+      "Professional Twin",
+      "Worker Twin",
+      "Athlete Twin",
+      "Care Twin"
+    ],
+    "agents": [
+      "Tutor Agent",
+      "Career Agent",
+      "Safety Agent",
+      "Coach Agent",
+      "Care Agent"
+    ],
+    "outcomes": [
+      "Recommendations",
+      "Human Decisions",
+      "Actions",
+      "Measurable Progress"
+    ]
+  },
+  "claim_taxonomy": {
+    "F": "Fact",
+    "E": "Evidence",
+    "H": "Hypothesis",
+    "A": "Assumption",
+    "I": "Inference",
+    "P": "Projection",
+    "V": "To be validated"
+  },
+  "maturity_taxonomy": [
+    "IDEA",
+    "HYPOTHESIS",
+    "PROTOTYPE",
+    "EXPERIMENT",
+    "EVIDENCE",
+    "VALIDATED_PRODUCT"
+  ],
+  "status_taxonomy": [
+    "NOT_STARTED",
+    "RESEARCHING",
+    "DRAFT",
+    "PARTIAL",
+    "EVIDENCE_READY",
+    "REVIEW",
+    "PASS",
+    "BLOCKED",
+    "DEFERRED",
+    "REJECTED"
+  ],
+  "sensitivity_taxonomy": [
+    "PUBLIC",
+    "INTERNAL",
+    "CONFIDENTIAL",
+    "SENSITIVE_PERSONAL",
+    "RESTRICTED"
+  ],
+  "change_taxonomy": {
+    "editorial": "Meaning unchanged",
+    "visual": "Presentation changed, semantics unchanged",
+    "semantic": "Meaning, model or contract changed",
+    "architectural": "Boundary, dependency or trust model changed",
+    "breaking": "Existing consumers/contracts require coordinated change"
+  },
+  "naming": {
+    "contracts": "UPPER_SNAKE_CASE_vMAJOR.MINOR.ext",
+    "governed_markdown": "UPPER_SNAKE_CASE_vMAJOR.MINOR.md",
+    "assets": "descriptive-kebab-case_vMAJOR.MINOR.ext",
+    "registries": "UPPER_SNAKE_CASE_vMAJOR.MINOR.json"
+  }
+}
