@@ -537,3 +537,36 @@ The immediate priorities are:
 > Build the evidence before claiming the intelligence.
 
 The Human Intelligence Platform should evolve through measurable experiments, governed architecture and explicit human control.
+
+
+---
+
+## 19. Governance and agent memory layer
+
+The repository now maintains a machine-readable context layer so humans and agents can acquire the minimum relevant context without reconstructing the project from chat history.
+
+Canonical governance and memory artifacts:
+
+| Artifact | Purpose |
+|---|---|
+| [PROJECT_SCOPE_v0.1](governance/PROJECT_SCOPE_v0.1.md) | Authorized scope, exclusions, MVP boundary, phases and NVIDIA-track boundaries |
+| [TAXONOMY_v0.1](governance/TAXONOMY_v0.1.json) | Canonical categories, prefixes, claim types, maturity states, statuses and naming |
+| [VARIABLE_REGISTRY_v0.1](governance/VARIABLE_REGISTRY_v0.1.json) | Important project variables, values, validation status and source of truth |
+| [FILE_INVENTORY_v0.1](governance/FILE_INVENTORY_v0.1.json) | Governed file inventory with descriptions, roles and read priority |
+| [AGENT_MEMORY_MANIFEST_v0.1](memory/AGENT_MEMORY_MANIFEST_v0.1.json) | Context router that maps task types to the minimum files an agent should load |
+
+Agent bootstrap flow:
+
+```text
+AGENTS.md
+   ↓
+AGENT_MEMORY_MANIFEST
+   ↓
+PROJECT_SCOPE
+   ↓
+TAXONOMY + FILE INVENTORY + VARIABLES
+   ↓
+TASK-SPECIFIC CONTRACTS / EVIDENCE
+```
+
+This memory layer is repository memory, not a substitute for evidence. It records current governed context and points agents to the authoritative artifacts.
