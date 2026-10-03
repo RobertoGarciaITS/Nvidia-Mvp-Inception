@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Feature UX Flow Contract",
+  "version": "0.1",
+  "required": ["feature_id", "entry_point", "states", "transitions", "permissions"],
+  "properties": {
+    "feature_id": {"type": "string"},
+    "entry_point": {"type": "string"},
+    "states": {"type": "array", "items": {"type": "object", "required": ["id", "kind", "purpose"], "properties": {"id": {"type": "string"}, "kind": {"enum": ["entry", "form", "loading", "empty", "error", "success", "view", "exit"]}, "purpose": {"type": "string"}, "actions": {"type": "array", "items": {"type": "string"}}}}},
+    "transitions": {"type": "array", "items": {"type": "object", "required": ["from", "action", "to"], "properties": {"from": {"type": "string"}, "action": {"type": "string"}, "to": {"type": "string"}, "validation": {"type": "string"}}}},
+    "permissions": {"type": "object", "required": ["owner", "readers", "editors"], "properties": {"owner": {"type": "string"}, "readers": {"type": "array", "items": {"type": "string"}}, "editors": {"type": "array", "items": {"type": "string"}}, "consent_required": {"type": "boolean"}}}
+  }
+}

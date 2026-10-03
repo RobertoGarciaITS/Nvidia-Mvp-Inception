@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Feature Requirement Contract",
+  "version": "0.1",
+  "required": ["feature_id", "feature_name", "user", "problem", "desired_outcome", "priority", "requirements", "acceptance_criteria", "status"],
+  "properties": {
+    "feature_id": {"type": "string", "pattern": "^FEAT-[0-9]{3}$"},
+    "feature_name": {"type": "string", "minLength": 3},
+    "user": {"type": "string", "minLength": 1},
+    "buyer": {"type": "string"},
+    "problem": {"type": "string", "minLength": 10},
+    "desired_outcome": {"type": "string", "minLength": 10},
+    "priority": {"enum": ["P0", "P1", "P2"]},
+    "requirements": {"type": "array", "items": {"type": "object", "required": ["id", "statement", "type"], "properties": {"id": {"type": "string"}, "statement": {"type": "string"}, "type": {"enum": ["functional", "non_functional", "privacy", "data", "business"]}}}},
+    "acceptance_criteria": {"type": "array", "items": {"type": "object", "required": ["given", "when", "then"], "properties": {"given": {"type": "string"}, "when": {"type": "string"}, "then": {"type": "string"}}}},
+    "status": {"enum": ["INTAKE", "CLARIFY", "READY", "BUILDING", "VERIFY", "RELEASED", "BLOCKED"]}
+  }
+}
