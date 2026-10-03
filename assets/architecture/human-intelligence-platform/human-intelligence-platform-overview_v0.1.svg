@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 38px Inter,Arial,sans-serif;fill:#13283f}.subtitle{font:400 18px Inter,Arial,sans-serif;fill:#64748b}
+      .card{fill:#fff;stroke:#d9e4ee;stroke-width:1.5}.core{fill:#075f70}.coretitle{font:700 25px Inter,Arial,sans-serif;fill:white}
+      .h2{font:700 19px Inter,Arial,sans-serif;fill:#162a40}.body{font:400 13px Inter,Arial,sans-serif;fill:#617188}
+      .label{font:600 12px Inter,Arial,sans-serif;fill:#18304a}.pill{fill:#f8fbfd;stroke:#d9e4ee;stroke-width:1}
+      .corepill{fill:#f5fafb}.line{fill:none;stroke:#174e71;stroke-width:2}.arrow{fill:#174e71}
+      .teal{fill:#d9f1ef}.blue{fill:#dcecff}.pink{fill:#f8dddd}.band{fill:#edf5fa;stroke:#d9e4ee;stroke-width:1.2}
+      .small{font:400 11px Inter,Arial,sans-serif;fill:#64748b}
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="arrow"/></marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="900"/>
+  <text x="800" y="48" text-anchor="middle" class="title">HUMAN INTELLIGENCE PLATFORM</text>
+  <text x="800" y="77" text-anchor="middle" class="subtitle">From fragmented human data to evidence-backed human intelligence</text>
+
+  <!-- Domain Twins -->
+  <g>
+    <rect x="30" y="112" width="285" height="112" rx="14" class="card"/>
+    <circle cx="78" cy="160" r="27" class="blue"/><text x="78" y="166" text-anchor="middle" class="h2">E</text>
+    <text x="120" y="153" class="h2">Education Twin</text><text x="120" y="178" class="body">Learning, credentials</text><text x="120" y="196" class="body">and academic growth</text>
+
+    <rect x="335" y="112" width="285" height="112" rx="14" class="card"/>
+    <circle cx="383" cy="160" r="27" class="blue"/><text x="383" y="166" text-anchor="middle" class="h2">P</text>
+    <text x="425" y="153" class="h2">Professional Twin</text><text x="425" y="178" class="body">Career, roles and</text><text x="425" y="196" class="body">professional identity</text>
+
+    <rect x="640" y="112" width="285" height="112" rx="14" class="card"/>
+    <circle cx="688" cy="160" r="27" class="teal"/><text x="688" y="166" text-anchor="middle" class="h2">W</text>
+    <text x="730" y="153" class="h2">Worker Twin</text><text x="730" y="178" class="body">Work performance, productivity</text><text x="730" y="196" class="body">and collaboration</text>
+
+    <rect x="945" y="112" width="285" height="112" rx="14" class="card"/>
+    <circle cx="993" cy="160" r="27" class="blue"/><text x="993" y="166" text-anchor="middle" class="h2">A</text>
+    <text x="1035" y="153" class="h2">Athlete Twin</text><text x="1035" y="178" class="body">Health, training and</text><text x="1035" y="196" class="body">physical performance</text>
+
+    <rect x="1250" y="112" width="320" height="112" rx="14" class="card"/>
+    <circle cx="1298" cy="160" r="27" class="pink"/><text x="1298" y="166" text-anchor="middle" class="h2">C</text>
+    <text x="1340" y="153" class="h2">Care Twin</text><text x="1340" y="178" class="body">Wellbeing, care and</text><text x="1340" y="196" class="body">support ecosystems</text>
+  </g>
+
+  <!-- Domain to core -->
+  <path d="M173 224 C173 255 600 240 680 290" class="line" marker-end="url(#arrow)"/>
+  <path d="M478 224 C478 250 670 245 715 290" class="line" marker-end="url(#arrow)"/>
+  <path d="M782 224 L782 287" class="line" marker-end="url(#arrow)"/>
+  <path d="M1088 224 C1088 250 900 245 865 290" class="line" marker-end="url(#arrow)"/>
+  <path d="M1410 224 C1410 255 980 240 900 290" class="line" marker-end="url(#arrow)"/>
+
+  <!-- Evidence -->
+  <rect x="30" y="300" width="470" height="175" rx="14" class="card"/>
+  <circle cx="74" cy="344" r="25" class="blue"/><text x="74" y="350" text-anchor="middle" class="h2">G</text>
+  <text x="113" y="339" class="h2">Evidence Graph</text><text x="113" y="361" class="body">Verifiable data and real-world proof</text>
+  <g>
+    <rect x="48" y="391" width="78" height="58" rx="9" class="pill"/><text x="87" y="425" text-anchor="middle" class="label">Certificates</text>
+    <rect x="134" y="391" width="72" height="58" rx="9" class="pill"/><text x="170" y="425" text-anchor="middle" class="label">GitHub</text>
+    <rect x="214" y="391" width="65" height="58" rx="9" class="pill"/><text x="246" y="425" text-anchor="middle" class="label">Tests</text>
+    <rect x="287" y="391" width="84" height="58" rx="9" class="pill"/><text x="329" y="425" text-anchor="middle" class="label">Projects</text>
+    <rect x="379" y="391" width="102" height="58" rx="9" class="pill"/><text x="430" y="425" text-anchor="middle" class="label">Work Events</text>
+  </g>
+
+  <!-- Core -->
+  <rect x="545" y="286" width="510" height="190" rx="16" class="core"/>
+  <text x="800" y="326" text-anchor="middle" class="coretitle">HUMAN DIGITAL TWIN CORE</text>
+  <circle cx="640" cy="388" r="48" fill="#d8edf0" opacity=".95"/><circle cx="640" cy="374" r="15" fill="#6da0aa"/><path d="M611 426 Q640 397 669 426" fill="#6da0aa"/>
+  <rect x="710" y="352" width="96" height="42" rx="8" class="corepill"/><text x="758" y="378" text-anchor="middle" class="label">Identity</text>
+  <rect x="818" y="352" width="96" height="42" rx="8" class="corepill"/><text x="866" y="378" text-anchor="middle" class="label">State</text>
+  <rect x="926" y="352" width="96" height="42" rx="8" class="corepill"/><text x="974" y="378" text-anchor="middle" class="label">Context</text>
+  <rect x="710" y="408" width="150" height="42" rx="8" class="corepill"/><text x="785" y="434" text-anchor="middle" class="label">Goals</text>
+  <rect x="872" y="408" width="150" height="42" rx="8" class="corepill"/><text x="947" y="434" text-anchor="middle" class="label">Events</text>
+
+  <!-- Capability -->
+  <rect x="1100" y="300" width="470" height="175" rx="14" class="card"/>
+  <circle cx="1144" cy="344" r="25" class="teal"/><text x="1144" y="350" text-anchor="middle" class="h2">G</text>
+  <text x="1183" y="339" class="h2">Capability Graph</text><text x="1183" y="361" class="body">Structured human capabilities and potential</text>
+  <g>
+    <rect x="1118" y="391" width="82" height="58" rx="9" class="pill"/><text x="1159" y="425" text-anchor="middle" class="label">Knowledge</text>
+    <rect x="1208" y="391" width="66" height="58" rx="9" class="pill"/><text x="1241" y="425" text-anchor="middle" class="label">Skills</text>
+    <rect x="1282" y="391" width="96" height="58" rx="9" class="pill"/><text x="1330" y="425" text-anchor="middle" class="label">Competencies</text>
+    <rect x="1386" y="391" width="82" height="58" rx="9" class="pill"/><text x="1427" y="425" text-anchor="middle" class="label">Experience</text>
+    <rect x="1476" y="391" width="78" height="58" rx="9" class="pill"/><text x="1515" y="425" text-anchor="middle" class="label">Capabilities</text>
+  </g>
+  <path d="M500 387 L545 387" class="line" marker-end="url(#arrow)"/>
+  <path d="M1100 387 L1055 387" class="line" marker-end="url(#arrow)"/>
+
+  <!-- Agents -->
+  <rect x="380" y="500" width="840" height="105" rx="14" class="card"/>
+  <text x="420" y="533" class="h2">AI Agent Layer</text><text x="565" y="533" class="body">Domain-specialist agents that turn authorized context into personalized intelligence</text>
+  <g>
+    <rect x="420" y="551" width="140" height="38" rx="9" class="pill"/><text x="490" y="575" text-anchor="middle" class="label">Tutor Agent</text>
+    <rect x="573" y="551" width="140" height="38" rx="9" class="pill"/><text x="643" y="575" text-anchor="middle" class="label">Career Agent</text>
+    <rect x="726" y="551" width="140" height="38" rx="9" class="pill"/><text x="796" y="575" text-anchor="middle" class="label">Safety Agent</text>
+    <rect x="879" y="551" width="140" height="38" rx="9" class="pill"/><text x="949" y="575" text-anchor="middle" class="label">Coach Agent</text>
+    <rect x="1032" y="551" width="140" height="38" rx="9" class="pill"/><text x="1102" y="575" text-anchor="middle" class="label">Care Agent</text>
+  </g>
+  <path d="M800 476 L800 500" class="line" marker-end="url(#arrow)"/>
+
+  <!-- Data sources -->
+  <rect x="30" y="632" width="1540" height="78" rx="14" class="card"/>
+  <text x="65" y="661" class="h2">Human Data Sources</text><text x="65" y="684" class="small">Fragmented data from across the human journey</text>
+  <g>
+    <rect x="370" y="651" width="70" height="40" rx="8" class="pill"/><text x="405" y="676" text-anchor="middle" class="label">CV</text>
+    <rect x="450" y="651" width="95" height="40" rx="8" class="pill"/><text x="497" y="676" text-anchor="middle" class="label">LinkedIn</text>
+    <rect x="555" y="651" width="120" height="40" rx="8" class="pill"/><text x="615" y="676" text-anchor="middle" class="label">Certifications</text>
+    <rect x="685" y="651" width="145" height="40" rx="8" class="pill"/><text x="757" y="676" text-anchor="middle" class="label">Training Platforms</text>
+    <rect x="840" y="651" width="115" height="40" rx="8" class="pill"/><text x="897" y="676" text-anchor="middle" class="label">Work Systems</text>
+    <rect x="965" y="651" width="95" height="40" rx="8" class="pill"/><text x="1012" y="676" text-anchor="middle" class="label">Projects</text>
+    <rect x="1070" y="651" width="100" height="40" rx="8" class="pill"/><text x="1120" y="676" text-anchor="middle" class="label">Wearables</text>
+    <rect x="1180" y="651" width="90" height="40" rx="8" class="pill"/><text x="1225" y="676" text-anchor="middle" class="label">Sensors</text>
+    <rect x="1280" y="651" width="115" height="40" rx="8" class="pill"/><text x="1337" y="676" text-anchor="middle" class="label">Assessments</text>
+  </g>
+
+  <!-- Impact -->
+  <rect x="30" y="730" width="1540" height="72" rx="14" class="band"/>
+  <text x="65" y="760" class="h2">From Intelligence to Impact</text><text x="65" y="784" class="small">Turning insight into real human progress</text>
+  <rect x="450" y="747" width="195" height="40" rx="18" class="card"/><text x="547" y="772" text-anchor="middle" class="label">Recommendations</text>
+  <path d="M655 767 L715 767" class="line" marker-end="url(#arrow)"/>
+  <rect x="725" y="747" width="190" height="40" rx="18" class="card"/><text x="820" y="772" text-anchor="middle" class="label">Human Decisions</text>
+  <path d="M925 767 L985 767" class="line" marker-end="url(#arrow)"/>
+  <rect x="995" y="747" width="150" height="40" rx="18" class="card"/><text x="1070" y="772" text-anchor="middle" class="label">Actions</text>
+  <path d="M1155 767 L1215 767" class="line" marker-end="url(#arrow)"/>
+  <rect x="1225" y="747" width="255" height="40" rx="18" class="card"/><text x="1352" y="772" text-anchor="middle" class="label">Measurable Progress</text>
+
+  <!-- Governance -->
+  <rect x="30" y="822" width="1540" height="58" rx="14" class="card"/>
+  <text x="65" y="848" class="h2">Trust, Privacy &amp; Governance</text><text x="65" y="868" class="small">People control their data. Transparency builds trust.</text>
+  <g>
+    <rect x="500" y="834" width="105" height="34" rx="16" class="pill"/><text x="552" y="856" text-anchor="middle" class="label">Identity</text>
+    <text x="620" y="856" class="label">→</text>
+    <rect x="645" y="834" width="105" height="34" rx="16" class="pill"/><text x="697" y="856" text-anchor="middle" class="label">Consent</text>
+    <text x="765" y="856" class="label">→</text>
+    <rect x="790" y="834" width="105" height="34" rx="16" class="pill"/><text x="842" y="856" text-anchor="middle" class="label">Purpose</text>
+    <text x="910" y="856" class="label">→</text>
+    <rect x="935" y="834" width="125" height="34" rx="16" class="pill"/><text x="997" y="856" text-anchor="middle" class="label">Minimum Data</text>
+    <text x="1075" y="856" class="label">→</text>
+    <rect x="1100" y="834" width="125" height="34" rx="16" class="pill"/><text x="1162" y="856" text-anchor="middle" class="label">Domain Access</text>
+    <text x="1240" y="856" class="label">→</text>
+    <rect x="1265" y="834" width="105" height="34" rx="16" class="pill"/><text x="1317" y="856" text-anchor="middle" class="label">Audit</text>
+  </g>
+
+  <!-- feedback loop -->
+  <path d="M1350 802 C1350 815 460 815 460 787" class="line" marker-end="url(#arrow)"/>
+  <text x="920" y="816" text-anchor="middle" class="small">Feedback: new events, evidence and outcomes update the Twin</text>
+</svg>
