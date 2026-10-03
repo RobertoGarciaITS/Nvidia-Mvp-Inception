@@ -3,7 +3,8 @@
 ## Human Intelligence Platform — Agent Execution Contract
 
 **Repository:** `RobertoGarciaITS/Nvidia-Mvp-Inception`  
-**Scope:** Human Intelligence Platform + NVIDIA Inception technical/application track  
+**Repository role:** Governed control plane for architecture, research, evidence, memory and execution  
+**Scope:** Human Intelligence Platform + separate NVIDIA Inception technical/application track  
 **Status:** Baseline operating contract  
 **Applies to:** Codex, coding agents, research agents, document agents, AI copilots and automated workflows operating in this repository.
 
@@ -677,7 +678,13 @@ Do not replace uncertainty with invention.
 
 # 23. Current repository baseline
 
-At the time of this contract, the governed baseline consists of:
+The authoritative repository inventory is:
+
+`governance/FILE_INVENTORY_v0.1.json`
+
+Agents must treat that registry as the canonical file catalog.
+
+Current human-readable snapshot:
 
 ```text
 README.md
@@ -691,7 +698,18 @@ assets/
 contracts/
 └── architecture/
     └── HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json
+
+governance/
+├── PROJECT_SCOPE_v0.1.md
+├── TAXONOMY_v0.1.json
+├── VARIABLE_REGISTRY_v0.1.json
+└── FILE_INVENTORY_v0.1.json
+
+memory/
+└── AGENT_MEMORY_MANIFEST_v0.1.json
 ```
+
+The snapshot is explanatory only. If it conflicts with the file inventory, use the inventory and report the documentation drift.
 
 Do not assume additional systems are implemented simply because they appear in the long-term architecture.
 
