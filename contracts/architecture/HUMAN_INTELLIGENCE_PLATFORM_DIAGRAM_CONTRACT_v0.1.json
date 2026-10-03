@@ -8,12 +8,18 @@
   "created_date": "2026-10-02",
   "repository": "RobertoGarciaITS/Nvidia-Mvp-Inception",
   "image": {
-    "repository_path": "assets/architecture/human-intelligence-platform/human-intelligence-platform-overview_v0.1.png",
-    "format": "png",
-    "width_px": 1672,
-    "height_px": 941,
-    "aspect_ratio": "16:9 approximate",
-    "sha256": "e3d805cf735d2b382fb49d12f968c95ef2fa96f34279b8cec49cc6c427d8c3c2"
+    "canonical_repository_path": "assets/architecture/human-intelligence-platform/human-intelligence-platform-overview_v0.1.svg",
+    "canonical_format": "svg",
+    "canonical_width_px": 1600,
+    "canonical_height_px": 900,
+    "canonical_aspect_ratio": "16:9",
+    "reference_generated_raster": {
+      "format": "png",
+      "width_px": 1672,
+      "height_px": 941,
+      "sha256": "e3d805cf735d2b382fb49d12f968c95ef2fa96f34279b8cec49cc6c427d8c3c2",
+      "role": "visual-generation reference used to derive the repository-native vector artifact"
+    }
   },
   "purpose": "Define the canonical visual architecture of the Human Intelligence Platform for governance, roadmap, pitch-deck, NVIDIA Inception and future system-design artifacts.",
   "design_principles": [
@@ -26,50 +32,173 @@
     "Trust, privacy and governance are architectural layers"
   ],
   "layers": [
-    {"id":"L1","name":"Domain Twins","nodes":["education_twin","professional_twin","worker_twin","athlete_twin","care_twin"]},
-    {"id":"L2","name":"Human Intelligence Core","nodes":["evidence_graph","human_digital_twin_core","capability_graph"]},
-    {"id":"L3","name":"AI Agent Layer","nodes":["tutor_agent","career_agent","safety_agent","coach_agent","care_agent"]},
-    {"id":"L4","name":"Human Data Sources","nodes":["cv","linkedin","certifications","training_platforms","work_systems","projects","wearables","sensors","assessments"]},
-    {"id":"L5","name":"Intelligence to Impact","nodes":["recommendations","human_decisions","actions","measurable_progress"]},
-    {"id":"L6","name":"Trust, Privacy & Governance","nodes":["identity_control","consent","purpose","minimum_data","domain_access","audit"]}
+    {
+      "id": "L1",
+      "name": "Domain Twins",
+      "nodes": [
+        "education_twin",
+        "professional_twin",
+        "worker_twin",
+        "athlete_twin",
+        "care_twin"
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "Human Intelligence Core",
+      "nodes": [
+        "evidence_graph",
+        "human_digital_twin_core",
+        "capability_graph"
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "AI Agent Layer",
+      "nodes": [
+        "tutor_agent",
+        "career_agent",
+        "safety_agent",
+        "coach_agent",
+        "care_agent"
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "Human Data Sources",
+      "nodes": [
+        "cv",
+        "linkedin",
+        "certifications",
+        "training_platforms",
+        "work_systems",
+        "projects",
+        "wearables",
+        "sensors",
+        "assessments"
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "Intelligence to Impact",
+      "nodes": [
+        "recommendations",
+        "human_decisions",
+        "actions",
+        "measurable_progress"
+      ]
+    },
+    {
+      "id": "L6",
+      "name": "Trust, Privacy & Governance",
+      "nodes": [
+        "identity_control",
+        "consent",
+        "purpose",
+        "minimum_data",
+        "domain_access",
+        "audit"
+      ]
+    }
   ],
   "core": {
     "id": "human_digital_twin_core",
-    "components": ["identity","state","context","goals","events"],
+    "components": [
+      "identity",
+      "state",
+      "context",
+      "goals",
+      "events"
+    ],
     "definition": "Persistent, permission-aware representation of the person's current longitudinal state and references to supporting evidence and capabilities."
   },
   "graphs": {
-    "evidence_graph": {"question":"How do we know?","evidence_types":["certificates","github","tests","projects","work_events"]},
-    "capability_graph": {"question":"What can this person demonstrably do?","capability_types":["knowledge","skills","competencies","experience","capabilities"]}
+    "evidence_graph": {
+      "question": "How do we know?",
+      "evidence_types": [
+        "certificates",
+        "github",
+        "tests",
+        "projects",
+        "work_events"
+      ]
+    },
+    "capability_graph": {
+      "question": "What can this person demonstrably do?",
+      "capability_types": [
+        "knowledge",
+        "skills",
+        "competencies",
+        "experience",
+        "capabilities"
+      ]
+    }
   },
   "domain_twins": {
-    "education_twin":"Learning, credentials and academic growth",
-    "professional_twin":"Career, roles and professional identity",
-    "worker_twin":"Work performance, productivity and collaboration",
-    "athlete_twin":"Health, training and physical performance",
-    "care_twin":"Wellbeing, care and support ecosystems"
+    "education_twin": "Learning, credentials and academic growth",
+    "professional_twin": "Career, roles and professional identity",
+    "worker_twin": "Work performance, productivity and collaboration",
+    "athlete_twin": "Health, training and physical performance",
+    "care_twin": "Wellbeing, care and support ecosystems"
   },
   "agents": {
-    "tutor_agent":"Education-domain assistance",
-    "career_agent":"Professional/career assistance",
-    "safety_agent":"Worker and industrial-safety assistance",
-    "coach_agent":"Athlete/performance assistance",
-    "care_agent":"Care-domain assistance"
+    "tutor_agent": "Education-domain assistance",
+    "career_agent": "Professional/career assistance",
+    "safety_agent": "Worker and industrial-safety assistance",
+    "coach_agent": "Athlete/performance assistance",
+    "care_agent": "Care-domain assistance"
   },
-  "primary_flow": ["human_data_sources","evidence_graph","human_digital_twin_core","capability_graph","ai_agent_layer","recommendations","human_decisions","actions","measurable_progress"],
+  "primary_flow": [
+    "human_data_sources",
+    "evidence_graph",
+    "human_digital_twin_core",
+    "capability_graph",
+    "ai_agent_layer",
+    "recommendations",
+    "human_decisions",
+    "actions",
+    "measurable_progress"
+  ],
   "feedback_loop": {
-    "from":"measurable_progress",
-    "to":["events","evidence_graph","human_digital_twin_core"],
-    "meaning":"Outcomes and actions generate new events, evidence and state updates."
+    "from": "measurable_progress",
+    "to": [
+      "events",
+      "evidence_graph",
+      "human_digital_twin_core"
+    ],
+    "meaning": "Outcomes and actions generate new events, evidence and state updates."
   },
-  "governance_flow":["identity_control","consent","purpose","minimum_data","domain_access","audit"],
-  "governance_rules":["Least privilege","Purpose limitation","Minimum necessary data","Domain isolation","Evidence provenance","Auditability","Revocation","Human oversight"],
-  "usage":["NVIDIA Inception pitch deck","Product architecture baseline","System design and ADR input","Domain roadmap planning","Agent context-contract design","Technical appendix and stakeholder communication"],
+  "governance_flow": [
+    "identity_control",
+    "consent",
+    "purpose",
+    "minimum_data",
+    "domain_access",
+    "audit"
+  ],
+  "governance_rules": [
+    "Least privilege",
+    "Purpose limitation",
+    "Minimum necessary data",
+    "Domain isolation",
+    "Evidence provenance",
+    "Auditability",
+    "Revocation",
+    "Human oversight"
+  ],
+  "usage": [
+    "NVIDIA Inception pitch deck",
+    "Product architecture baseline",
+    "System design and ADR input",
+    "Domain roadmap planning",
+    "Agent context-contract design",
+    "Technical appendix and stakeholder communication"
+  ],
   "change_control": {
-    "breaking_changes_require_version_bump":true,
-    "visual_changes_without_semantic_change":"patch version",
-    "semantic_node_or_flow_changes":"minor version or ADR",
-    "architecture_boundary_changes":"ADR required",
-    "source_of_truth":"This JSON contract governs the semantic structure; the PNG is the rendered visual artifact."
+    "breaking_changes_require_version_bump": true,
+    "visual_changes_without_semantic_change": "patch version",
+    "semantic_node_or_flow_changes": "minor version or ADR",
+    "architecture_boundary_changes": "ADR required",
+    "source_of_truth": "This JSON contract governs the semantic structure; the SVG is the canonical repository-native visual artifact. Raster exports are derived presentation artifacts."
   }
 }
