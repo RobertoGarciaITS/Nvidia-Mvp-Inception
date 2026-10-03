@@ -1,0 +1,102 @@
+{
+  "artifact_id": "HIP-MEM-MANIFEST-001",
+  "version": "0.1",
+  "status": "BASELINE",
+  "purpose": "Provide deterministic, minimum-necessary context acquisition for agents so repository memory can grow without requiring full-repository rereads.",
+  "bootstrap_order": [
+    "AGENTS.md",
+    "memory/AGENT_MEMORY_MANIFEST_v0.1.json",
+    "governance/PROJECT_SCOPE_v0.1.md",
+    "governance/TAXONOMY_v0.1.json",
+    "governance/FILE_INVENTORY_v0.1.json",
+    "governance/VARIABLE_REGISTRY_v0.1.json"
+  ],
+  "context_bundles": {
+    "architecture": {
+      "description": "Use for architecture, Twin, Evidence Graph, Capability Graph, domains or system-boundary tasks.",
+      "files": [
+        "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json",
+        "assets/architecture/human-intelligence-platform/human-intelligence-platform-overview_v0.1.svg"
+      ]
+    },
+    "governance": {
+      "description": "Use for scope, rules, lifecycle, artifact or policy changes.",
+      "files": [
+        "governance/PROJECT_SCOPE_v0.1.md",
+        "governance/TAXONOMY_v0.1.json",
+        "governance/VARIABLE_REGISTRY_v0.1.json",
+        "governance/FILE_INVENTORY_v0.1.json"
+      ]
+    },
+    "nvidia": {
+      "description": "Use for NVIDIA Inception, NVIDIA technology fit, workload evaluation and pitch claims.",
+      "files": [
+        "README.md",
+        "governance/PROJECT_SCOPE_v0.1.md",
+        "governance/VARIABLE_REGISTRY_v0.1.json"
+      ],
+      "missing_expected_artifacts": [
+        "NVIDIA Inception application scope",
+        "NVIDIA workload registry",
+        "benchmark/POC evidence"
+      ]
+    },
+    "pitch": {
+      "description": "Use for pitch-deck content and claims. Design must remain downstream of evidence.",
+      "files": [
+        "README.md",
+        "governance/VARIABLE_REGISTRY_v0.1.json",
+        "governance/PROJECT_SCOPE_v0.1.md"
+      ],
+      "rule": "Do not invent missing customer, market, traction, benchmark or partnership values."
+    },
+    "agent_design": {
+      "description": "Use for agent roles, permissions, context contracts and behavior.",
+      "files": [
+        "AGENTS.md",
+        "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json",
+        "governance/PROJECT_SCOPE_v0.1.md"
+      ]
+    }
+  },
+  "task_routing": [
+    {
+      "task_pattern": "architecture|twin|graph|domain|data flow",
+      "load_bundle": "architecture"
+    },
+    {
+      "task_pattern": "scope|governance|contract|policy|taxonomy|inventory",
+      "load_bundle": "governance"
+    },
+    {
+      "task_pattern": "nvidia|inception|nim|nemo|jetson|omniverse|metropolis",
+      "load_bundle": "nvidia"
+    },
+    {
+      "task_pattern": "pitch|deck|market|business model|ask",
+      "load_bundle": "pitch"
+    },
+    {
+      "task_pattern": "agent|subagent|orchestrator|skills|tool permissions",
+      "load_bundle": "agent_design"
+    }
+  ],
+  "memory_rules": [
+    "Load the smallest relevant context bundle after bootstrap.",
+    "Prefer source-of-truth artifacts over summaries.",
+    "Treat README as orientation, not as the sole authority for governed semantics.",
+    "Do not infer missing evidence from architecture or vision documents.",
+    "When a new governed file materially changes context routing, publish a new manifest version.",
+    "Do not store secrets, credentials or raw sensitive personal data in agent memory artifacts."
+  ],
+  "known_gaps": [
+    "No research registry yet.",
+    "No evidence registry yet.",
+    "No roadmap registry artifact yet beyond scope phase sequence.",
+    "No NVIDIA application scope artifact yet.",
+    "No validated beachhead.",
+    "No market sizing baseline.",
+    "No benchmark evidence.",
+    "No production source code baseline."
+  ]
+}
