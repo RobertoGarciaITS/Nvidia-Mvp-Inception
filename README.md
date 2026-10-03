@@ -1,8 +1,10 @@
-# Human Intelligence Platform — NVIDIA Inception Track
+# Human Intelligence Platform — Governed Control Plane
 
 > From fragmented human data to evidence-backed human intelligence.
 
-This repository is the governed development and evidence workspace for the **Human Intelligence Platform (HIP)** and its **NVIDIA Inception application / technical evaluation track**.
+This repository is the **governed control plane, architecture, research, evidence and execution workspace** for developing the **Human Intelligence Platform (HIP)** from hypothesis to validated MVP.
+
+It also manages **NVIDIA Inception as a separate technology-evaluation and startup-acceleration track**. NVIDIA Inception supports the product journey; it does not define the product roadmap.
 
 The project explores a persistent, permission-aware **Human Digital Twin Core** that connects evidence, capabilities, domain-specific context and AI agents to support measurable human progress.
 
@@ -389,10 +391,17 @@ Recommended internal claim tags:
 
 The repository is intentionally early and minimal.
 
-Current governed artifacts:
+The **canonical file inventory** is maintained in:
+
+[governance/FILE_INVENTORY_v0.1.json](governance/FILE_INVENTORY_v0.1.json)
+
+The tree below is a human-readable snapshot only and must not be treated as the authoritative inventory:
 
 ```text
 .
+├── README.md
+├── AGENTS.md
+│
 ├── assets/
 │   └── architecture/
 │       └── human-intelligence-platform/
@@ -402,19 +411,24 @@ Current governed artifacts:
 │   └── architecture/
 │       └── HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json
 │
-├── AGENTS.md
-└── README.md
+├── governance/
+│   ├── PROJECT_SCOPE_v0.1.md
+│   ├── TAXONOMY_v0.1.json
+│   ├── VARIABLE_REGISTRY_v0.1.json
+│   └── FILE_INVENTORY_v0.1.json
+│
+└── memory/
+    └── AGENT_MEMORY_MANIFEST_v0.1.json
 ```
 
 Future directories should only be introduced when real artifacts require them.
 
-Target families may include:
+Potential future families include:
 
 ```text
 docs/
 research/
 evidence/
-governance/
 roadmap/
 pitch/
 src/
@@ -460,17 +474,25 @@ Architecture changes that alter system boundaries, semantics or trust assumption
 
 ## 14. Repository operating rule
 
-Before changing the repository, agents and contributors must read:
+For agents, the canonical bootstrap order is governed by:
+
+[memory/AGENT_MEMORY_MANIFEST_v0.1.json](memory/AGENT_MEMORY_MANIFEST_v0.1.json)
+
+The current bootstrap sequence is:
 
 1. `AGENTS.md`
-2. `README.md`
-3. the relevant contract(s)
-4. the relevant evidence / research artifact
-5. the active task or issue
+2. `memory/AGENT_MEMORY_MANIFEST_v0.1.json`
+3. `governance/PROJECT_SCOPE_v0.1.md`
+4. `governance/TAXONOMY_v0.1.json`
+5. `governance/FILE_INVENTORY_v0.1.json`
+6. `governance/VARIABLE_REGISTRY_v0.1.json`
+7. `README.md` for human-oriented project context
+8. the smallest relevant task-specific contract / research / evidence bundle
+9. the active task or issue
 
 Do not infer implementation from diagrams alone.
 
-The contract governs semantics.
+Contracts govern semantics; the memory manifest governs context routing; the file inventory governs the repository catalog.
 
 ---
 
