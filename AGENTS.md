@@ -44,11 +44,16 @@ over speed or speculative completeness.
 Before modifying anything, read in this order:
 
 1. `AGENTS.md`
-2. `README.md`
-3. relevant contract(s)
-4. relevant architecture artifact(s)
-5. relevant research / evidence artifact(s)
-6. active issue, task or execution order
+2. `memory/AGENT_MEMORY_MANIFEST_v0.1.json`
+3. `governance/PROJECT_SCOPE_v0.1.md`
+4. `governance/TAXONOMY_v0.1.json`
+5. `governance/FILE_INVENTORY_v0.1.json`
+6. `governance/VARIABLE_REGISTRY_v0.1.json`
+7. `README.md` for human-oriented project orientation
+8. task-specific contract(s), architecture, research and evidence artifacts
+9. active issue, task or execution order
+
+After the bootstrap files, use the memory manifest to load the **smallest relevant context bundle** for the task. Do not reread or infer the entire repository when the manifest provides a narrower authoritative path.
 
 If instructions conflict, use this precedence:
 
@@ -695,3 +700,32 @@ Do not assume additional systems are implemented simply because they appear in t
 # 24. Guiding rule
 
 > Build only what the current hypothesis needs, preserve evidence of what happened, and keep humans in control.
+
+
+# 25. Repository memory protocol
+
+The canonical agent context router is:
+
+`memory/AGENT_MEMORY_MANIFEST_v0.1.json`
+
+The canonical file catalog is:
+
+`governance/FILE_INVENTORY_v0.1.json`
+
+The canonical variable state registry is:
+
+`governance/VARIABLE_REGISTRY_v0.1.json`
+
+The canonical classification vocabulary is:
+
+`governance/TAXONOMY_v0.1.json`
+
+Rules:
+
+1. Use the memory manifest to select task-specific context.
+2. Use the file inventory to understand each artifact's role before editing it.
+3. Use the variable registry instead of inventing values for unresolved business or technical variables.
+4. Use the taxonomy when creating new governed artifacts, claims or statuses.
+5. If a task produces a new durable source of truth, update the appropriate registry in the same change or create the next registry version.
+6. Repository memory must record **what is currently governed**, not speculative facts.
+7. Never use memory files to store credentials, secrets or raw sensitive personal information.
