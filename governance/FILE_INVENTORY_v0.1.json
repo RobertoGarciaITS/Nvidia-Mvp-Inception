@@ -1,0 +1,118 @@
+{
+  "artifact_id": "HIP-GOV-FILE-INVENTORY-001",
+  "version": "0.1",
+  "status": "BASELINE",
+  "generated_for_branch": "main",
+  "purpose": "Machine-readable inventory of governed files, roles, descriptions, read priority and source-of-truth relationships.",
+  "files": [
+    {
+      "path": "README.md",
+      "category": "GOV",
+      "artifact_role": "human_entrypoint",
+      "description": "Human-readable overview of thesis, architecture, scope, MVP, NVIDIA track and current repository state.",
+      "status": "ACTIVE",
+      "read_priority": 1,
+      "source_of_truth_for": [
+        "project narrative",
+        "project status summary"
+      ]
+    },
+    {
+      "path": "AGENTS.md",
+      "category": "MEM",
+      "artifact_role": "agent_execution_contract",
+      "description": "Operating rules for Codex and other agents: read order, evidence discipline, architecture changes, security, testing and stop conditions.",
+      "status": "ACTIVE",
+      "read_priority": 0,
+      "source_of_truth_for": [
+        "agent operating behavior"
+      ]
+    },
+    {
+      "path": "assets/architecture/human-intelligence-platform/human-intelligence-platform-overview_v0.1.svg",
+      "category": "ASSET",
+      "artifact_role": "canonical_visual",
+      "description": "Repository-native vector rendering of the current Human Intelligence Platform conceptual architecture.",
+      "status": "BASELINE",
+      "read_priority": 6,
+      "source_of_truth_for": []
+    },
+    {
+      "path": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json",
+      "category": "ARCH",
+      "artifact_role": "semantic_architecture_contract",
+      "description": "Semantic source of truth for architecture layers, nodes, relationships, governance flow and feedback loop.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": [
+        "platform diagram semantics",
+        "architecture node taxonomy"
+      ]
+    },
+    {
+      "path": "governance/PROJECT_SCOPE_v0.1.md",
+      "category": "GOV",
+      "artifact_role": "scope_contract",
+      "description": "Defines in-scope/out-of-scope boundaries, current MVP, phases, NVIDIA track boundaries and scope-change rules.",
+      "status": "BASELINE",
+      "read_priority": 2,
+      "source_of_truth_for": [
+        "project scope",
+        "MVP boundary",
+        "phase boundaries"
+      ]
+    },
+    {
+      "path": "governance/TAXONOMY_v0.1.json",
+      "category": "GOV",
+      "artifact_role": "taxonomy_registry",
+      "description": "Defines canonical project categories, prefixes, claim classes, maturity states, statuses, sensitivity classes and naming conventions.",
+      "status": "BASELINE",
+      "read_priority": 3,
+      "source_of_truth_for": [
+        "taxonomy",
+        "classification vocabulary"
+      ]
+    },
+    {
+      "path": "governance/VARIABLE_REGISTRY_v0.1.json",
+      "category": "GOV",
+      "artifact_role": "variable_registry",
+      "description": "Tracks important project variables, values, validation status and their source-of-truth artifact.",
+      "status": "BASELINE",
+      "read_priority": 5,
+      "source_of_truth_for": [
+        "project variable state"
+      ]
+    },
+    {
+      "path": "governance/FILE_INVENTORY_v0.1.json",
+      "category": "GOV",
+      "artifact_role": "file_inventory",
+      "description": "Inventory and description of governed repository files with read priority and source-of-truth roles.",
+      "status": "BASELINE",
+      "read_priority": 2,
+      "source_of_truth_for": [
+        "file inventory"
+      ]
+    },
+    {
+      "path": "memory/AGENT_MEMORY_MANIFEST_v0.1.json",
+      "category": "MEM",
+      "artifact_role": "context_router",
+      "description": "Task-oriented agent memory manifest mapping topics and task types to the minimum files required for context acquisition.",
+      "status": "BASELINE",
+      "read_priority": 1,
+      "source_of_truth_for": [
+        "agent context routing",
+        "memory acquisition order"
+      ]
+    }
+  ],
+  "inventory_rules": [
+    "Inventory only files that exist or are created in the same governed change.",
+    "Do not list empty planned directories as implemented artifacts.",
+    "Every new governed artifact should be added to the next inventory version.",
+    "Use descriptions to explain purpose, not merely repeat file names."
+  ]
+}
