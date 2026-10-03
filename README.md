@@ -1,0 +1,539 @@
+# Human Intelligence Platform — NVIDIA Inception Track
+
+> From fragmented human data to evidence-backed human intelligence.
+
+This repository is the governed development and evidence workspace for the **Human Intelligence Platform (HIP)** and its **NVIDIA Inception application / technical evaluation track**.
+
+The project explores a persistent, permission-aware **Human Digital Twin Core** that connects evidence, capabilities, domain-specific context and AI agents to support measurable human progress.
+
+---
+
+## 1. Project thesis
+
+Human data already exists across many disconnected systems:
+
+- education and credentials;
+- professional history and projects;
+- assessments and training;
+- work systems and events;
+- wearables and sensors;
+- human goals and outcomes.
+
+The core hypothesis is that these fragments can be transformed into a longitudinal, evidence-backed representation of human capability that AI systems can use more safely and effectively.
+
+The conceptual flow is:
+
+```text
+HUMAN DATA / EVENTS
+        ↓
+EVIDENCE
+        ↓
+HUMAN DIGITAL TWIN CORE
+        ↓
+CAPABILITY INTELLIGENCE
+        ↓
+PERMISSIONED DOMAIN CONTEXT
+        ↓
+AI AGENTS
+        ↓
+HUMAN DECISIONS
+        ↓
+ACTIONS / OUTCOMES
+        ↓
+MEASURABLE PROGRESS
+        ↺
+```
+
+The long-term north star is:
+
+## Verified Human Progress
+
+The platform should ultimately be evaluated by evidence-backed human outcomes, not by prompt volume, token volume or number of agents.
+
+---
+
+## 2. Canonical architecture
+
+The current canonical architecture is represented by the governed diagram below.
+
+![Human Intelligence Platform architecture](assets/architecture/human-intelligence-platform/human-intelligence-platform-overview_v0.1.svg)
+
+Semantic source of truth:
+
+- [Architecture diagram contract v0.1](contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json)
+- [Canonical SVG architecture diagram v0.1](assets/architecture/human-intelligence-platform/human-intelligence-platform-overview_v0.1.svg)
+
+The **JSON contract governs semantics**.  
+The **SVG is the canonical repository-native visual representation**.  
+Future PNG, PDF and PPTX exports are derived presentation artifacts.
+
+---
+
+## 3. Core platform model
+
+### Human Digital Twin Core
+
+The Human Digital Twin Core is the persistent, permission-aware representation of the person's current longitudinal state.
+
+Current conceptual components:
+
+```text
+Identity
+State
+Context
+Goals
+Events
+```
+
+The Twin is not intended to indiscriminately duplicate all source data. It should maintain the minimum structured state and references needed to reason over evidence, capabilities, goals and authorized context.
+
+### Evidence Graph
+
+Primary question:
+
+> How do we know?
+
+Initial evidence classes include:
+
+- certificates;
+- GitHub;
+- assessments/tests;
+- projects;
+- work events.
+
+The Evidence Graph is intended to preserve provenance and distinguish claims from evidence-supported capabilities.
+
+### Capability Graph
+
+Primary question:
+
+> What can this person demonstrably do?
+
+Initial capability dimensions include:
+
+- knowledge;
+- skills;
+- competencies;
+- experience;
+- capabilities.
+
+The Capability Graph is intended to connect evidence-backed human capability with roles, learning, technologies, projects and future goals.
+
+---
+
+## 4. Domain Twins / permissioned domain views
+
+The platform uses one core human identity with multiple domain-specific views.
+
+Current conceptual domains:
+
+| Domain | Purpose |
+|---|---|
+| **Education Twin** | Learning, credentials and academic growth |
+| **Professional Twin** | Career, roles and professional identity |
+| **Worker Twin** | Work performance, productivity, authorization and industrial context |
+| **Athlete Twin** | Health, training and physical performance |
+| **Care Twin** | Wellbeing, care and support ecosystems |
+
+These should be implemented as **permissioned views/extensions of one Human Twin Core**, not as disconnected copies of the same person.
+
+---
+
+## 5. AI Agent Layer
+
+Agents are consumers of authorized context. They are not the source of truth about the person.
+
+Initial conceptual agents:
+
+| Agent | Domain |
+|---|---|
+| Tutor Agent | Education |
+| Career Agent | Professional development |
+| Safety Agent | Worker / industrial safety |
+| Coach Agent | Athlete / performance |
+| Care Agent | Care |
+
+Expected agent context should be composed from:
+
+```text
+Authorized Twin State
++
+Relevant Evidence
++
+Capability Graph
++
+Current Context
++
+Goals
++
+Domain Knowledge
++
+Policies
+```
+
+Agents may produce recommendations, explanations, plans, alerts or next actions, but **human decisions remain in the loop**.
+
+---
+
+## 6. Human data sources
+
+Potential input systems include:
+
+```text
+CV
+LinkedIn
+Certifications
+Training platforms
+Work systems
+Projects
+Wearables
+Sensors
+Assessments
+```
+
+The presence of a source in the architecture does **not** imply that an integration currently exists.
+
+Every integration must be separately designed, authorized and validated.
+
+---
+
+## 7. Intelligence-to-impact loop
+
+The intended product loop is:
+
+```text
+RECOMMENDATIONS
+      ↓
+HUMAN DECISIONS
+      ↓
+ACTIONS
+      ↓
+MEASURABLE PROGRESS
+      ↓
+NEW EVENTS / EVIDENCE
+      ↺
+```
+
+Outcomes should generate new events and evidence that can update the Human Twin and Capability Graph.
+
+This feedback loop is an architectural hypothesis until validated through working experiments.
+
+---
+
+## 8. Trust, privacy and governance
+
+Trust is part of the architecture.
+
+Baseline governance flow:
+
+```text
+IDENTITY
+   ↓
+CONSENT
+   ↓
+PURPOSE
+   ↓
+MINIMUM REQUIRED DATA
+   ↓
+DOMAIN ACCESS
+   ↓
+AUDIT
+```
+
+Baseline principles:
+
+- least privilege;
+- purpose limitation;
+- minimum necessary data;
+- domain isolation;
+- evidence provenance;
+- auditability;
+- revocation;
+- human oversight.
+
+A recruiter should not automatically receive health data.  
+A coach should not automatically receive professional data.  
+A safety workflow should receive only the worker context required for the task.
+
+---
+
+## 9. NVIDIA Inception track
+
+This repository also governs the technical and application work required to evaluate fit with **NVIDIA Inception**.
+
+NVIDIA is treated as an acceleration / technology evaluation track, not as the product roadmap itself.
+
+The rule is:
+
+```text
+WORKLOAD
+   ↓
+REQUIREMENT
+   ↓
+BENCHMARK
+   ↓
+NVIDIA CAPABILITY
+   ↓
+POC
+   ↓
+EVIDENCE
+```
+
+Not:
+
+```text
+NVIDIA TECHNOLOGY
+        ↓
+FIND A USE CASE
+```
+
+Candidate workload areas may eventually include:
+
+- AI inference;
+- agentic AI;
+- evaluation and guardrails;
+- computer vision;
+- edge inference;
+- industrial digital twins;
+- physical AI.
+
+No NVIDIA dependency or partnership should be claimed unless demonstrated or formally established.
+
+---
+
+## 10. Development scope
+
+The current target development sequence is:
+
+```text
+P00 — Foundation / Governance
+ ↓
+P01 — Problem + Beachhead Validation
+ ↓
+P02 — Human Twin Core
+ ↓
+P03 — Evidence Graph
+ ↓
+P04 — Capability Graph
+ ↓
+P05 — One Domain View
+ ↓
+P06 — One Agent MVP
+ ↓
+P07 — Pilot / Evidence
+ ↓
+P08 — NVIDIA Workload Evaluation
+ ↓
+P09 — Domain Expansion
+ ↓
+P10 — Physical AI / Edge / Industrial Extensions
+```
+
+The MVP should remain deliberately smaller than the full vision.
+
+Initial MVP target:
+
+```text
+Identity + Consent
++
+Human Twin Core
++
+Events
++
+Evidence Graph
++
+Capability Graph
++
+ONE Domain View
++
+ONE Agent
+```
+
+---
+
+## 11. Evidence maturity model
+
+The project must explicitly distinguish:
+
+```text
+IDEA
+  ↓
+HYPOTHESIS
+  ↓
+PROTOTYPE
+  ↓
+EXPERIMENT
+  ↓
+EVIDENCE
+  ↓
+VALIDATED PRODUCT
+```
+
+Claims should never move between these states without supporting evidence.
+
+Recommended internal claim tags:
+
+| Tag | Meaning |
+|---|---|
+| `[F]` | Fact |
+| `[E]` | Evidence |
+| `[H]` | Hypothesis |
+| `[A]` | Assumption |
+| `[I]` | Inference |
+| `[P]` | Projection |
+| `[V]` | To be validated |
+
+---
+
+## 12. Current repository state
+
+The repository is intentionally early and minimal.
+
+Current governed artifacts:
+
+```text
+.
+├── assets/
+│   └── architecture/
+│       └── human-intelligence-platform/
+│           └── human-intelligence-platform-overview_v0.1.svg
+│
+├── contracts/
+│   └── architecture/
+│       └── HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json
+│
+├── AGENTS.md
+└── README.md
+```
+
+Future directories should only be introduced when real artifacts require them.
+
+Target families may include:
+
+```text
+docs/
+research/
+evidence/
+governance/
+roadmap/
+pitch/
+src/
+tests/
+benchmarks/
+experiments/
+```
+
+This target structure is not a statement that those components already exist.
+
+---
+
+## 13. Artifact governance
+
+Every important artifact should have:
+
+- a stable identifier or file name;
+- explicit version;
+- status;
+- owner or responsible workflow when applicable;
+- source / evidence references;
+- change history through Git;
+- a defined semantic source of truth.
+
+Suggested statuses:
+
+```text
+NOT_STARTED
+RESEARCHING
+DRAFT
+PARTIAL
+EVIDENCE_READY
+REVIEW
+PASS
+BLOCKED
+DEFERRED
+REJECTED
+```
+
+Architecture changes that alter system boundaries, semantics or trust assumptions should require an ADR or equivalent governed decision record.
+
+---
+
+## 14. Repository operating rule
+
+Before changing the repository, agents and contributors must read:
+
+1. `AGENTS.md`
+2. `README.md`
+3. the relevant contract(s)
+4. the relevant evidence / research artifact
+5. the active task or issue
+
+Do not infer implementation from diagrams alone.
+
+The contract governs semantics.
+
+---
+
+## 15. Pitch-deck relationship
+
+The NVIDIA Inception pitch deck is a **derived communication artifact**.
+
+The intended chain is:
+
+```text
+RESEARCH
+   ↓
+EVIDENCE
+   ↓
+CLAIM
+   ↓
+ARCHITECTURE / PRODUCT DECISION
+   ↓
+SLIDE CONTENT
+   ↓
+DESIGN
+   ↓
+PPTX / PDF
+```
+
+Not:
+
+```text
+DESIGN
+   ↓
+invent a claim
+   ↓
+search for evidence later
+```
+
+---
+
+## 16. Current priorities
+
+The immediate priorities are:
+
+1. preserve the architecture baseline;
+2. define governance and execution contracts;
+3. validate the first customer problem;
+4. select one beachhead;
+5. design the smallest Human Twin + Evidence + Capability MVP;
+6. generate technical evidence;
+7. evaluate NVIDIA workloads only where justified;
+8. build the NVIDIA Inception deck from validated claims.
+
+---
+
+## 17. Status
+
+**Project stage:** pre-seed / architecture and validation phase  
+**Architecture baseline:** v0.1  
+**MVP:** not yet represented as validated production software in this repository  
+**NVIDIA Inception:** application / workload-evaluation track in development
+
+---
+
+## 18. Guiding principle
+
+> Build the evidence before claiming the intelligence.
+
+The Human Intelligence Platform should evolve through measurable experiments, governed architecture and explicit human control.
