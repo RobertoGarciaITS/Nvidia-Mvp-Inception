@@ -64,10 +64,15 @@ Semantic source of truth:
 
 - [Architecture diagram contract v0.1](contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json)
 - [Canonical SVG architecture diagram v0.1](assets/architecture/human-intelligence-platform/human-intelligence-platform-overview_v0.1.svg)
+- [Personal and Enterprise Digital Twin contract](contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_CONTRACT_v0.1.json)
+- [Personal and Enterprise Digital Twin architecture contract](contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json)
+- [Digital Twin maturity contract](contracts/architecture/DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json)
 
 The **JSON contract governs semantics**.  
 The **SVG is the canonical repository-native visual representation**.  
 Future PNG, PDF and PPTX exports are derived presentation artifacts.
+
+The diagram contract governs the core platform flow. The Personal and Enterprise contracts extend that baseline with the two Digital Twin scopes and their Authorized Relationship Layer. These extensions remain architecture-level unless implementation and validation evidence exists.
 
 ---
 
@@ -88,6 +93,18 @@ Events
 ```
 
 The Twin is not intended to indiscriminately duplicate all source data. It should maintain the minimum structured state and references needed to reason over evidence, capabilities, goals and authorized context.
+
+### Personal Digital Twin
+
+The Personal Digital Twin is the person's persistent representation across identity, state, context, goals, events, evidence, capabilities and outcomes. The proposed human flourishing organization contains seven life domains, but the current MVP must still select one permissioned domain view.
+
+### Enterprise Digital Twin
+
+The Enterprise Digital Twin represents an organization and its current state. It may contain nested People Twins, Asset Twins, Process Twins and Product Twins. An Asset Twin is therefore a component of an Enterprise Twin, not a synonym for the enterprise itself.
+
+### Authorized Relationship Layer
+
+The Authorized Relationship Layer connects Personal and Enterprise Twins through roles, projects, permissions, skills, goals and outcomes. It answers who may use which context, for what purpose and under what consent. It does not grant unrestricted cross-domain access.
 
 ### Evidence Graph
 
@@ -125,7 +142,7 @@ The Capability Graph is intended to connect evidence-backed human capability wit
 
 ## 4. Domain Twins / permissioned domain views
 
-The platform uses one core human identity with multiple domain-specific views.
+The platform uses one Human Twin Core with multiple permissioned domain-specific views. These operational views sit within the broader Personal Digital Twin scope and may participate in authorized relationships with an Enterprise Digital Twin.
 
 Current conceptual domains:
 
@@ -138,6 +155,8 @@ Current conceptual domains:
 | **Care Twin** | Wellbeing, care and support ecosystems |
 
 These should be implemented as **permissioned views/extensions of one Human Twin Core**, not as disconnected copies of the same person.
+
+The seven-domain human flourishing model and the seven Enterprise Twin domains are architecture-level organizing proposals. They do not replace the five current operational domain views and do not authorize implementation of all domains in the MVP.
 
 ---
 
@@ -408,8 +427,13 @@ The tree below is a human-readable snapshot only and must not be treated as the 
 │           └── human-intelligence-platform-overview_v0.1.svg
 │
 ├── contracts/
-│   └── architecture/
-│       └── HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json
+│   ├── architecture/
+│   │   ├── HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json
+│   │   ├── PERSONAL_ENTERPRISE_DIGITAL_TWIN_CONTRACT_v0.1.json
+│   │   ├── PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json
+│   │   └── DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json
+│   └── presentation/
+│       └── HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V2_CONTENT_DESIGN_CONTRACT_v0.1.json
 │
 ├── governance/
 │   ├── PROJECT_SCOPE_v0.1.md
@@ -421,7 +445,7 @@ The tree below is a human-readable snapshot only and must not be treated as the 
     └── AGENT_MEMORY_MANIFEST_v0.1.json
 ```
 
-Future directories should only be introduced when real artifacts require them.
+Architecture decisions, pitch deck v2 planning and execution prompts also exist and are catalogued in the file inventory. Their presence is not evidence that the product is implemented.
 
 Potential future families include:
 

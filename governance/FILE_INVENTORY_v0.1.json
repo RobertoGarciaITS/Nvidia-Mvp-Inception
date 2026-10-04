@@ -50,6 +50,87 @@
       ]
     },
     {
+      "path": "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_CONTRACT_v0.1.json",
+      "category": "ARCH",
+      "artifact_role": "digital_twin_semantics_contract",
+      "description": "Defines the minimum semantic components that distinguish Personal and Enterprise Digital Twins from profile databases.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": ["digital twin identity, state, evidence, behavior, governance and relationship semantics"]
+    },
+    {
+      "path": "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json",
+      "category": "ARCH",
+      "artifact_role": "digital_twin_reference_architecture",
+      "description": "Extends the core diagram with Personal Digital Twin, Enterprise Digital Twin, Authorized Relationship Layer and nested enterprise twins.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": ["personal-enterprise twin composition and authorized relationship structure"]
+    },
+    {
+      "path": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_LIFE_DOMAINS_CONTRACT_v0.1.json",
+      "category": "ARCH",
+      "artifact_role": "proposed_domain_model",
+      "description": "Proposes seven human life domains for organizing Personal Digital Twin views; it does not authorize implementation of all domains.",
+      "status": "PROPOSED",
+      "read_priority": 8,
+      "source_of_truth_for": ["proposed personal life-domain organization"]
+    },
+    {
+      "path": "contracts/architecture/DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json",
+      "category": "ARCH",
+      "artifact_role": "maturity_contract",
+      "description": "Defines maturity levels from profile representation through event-linked, human-in-the-loop and federated Digital Twin systems.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": ["Digital Twin maturity levels and current target assessment"]
+    },
+    {
+      "path": "contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V2_CONTENT_DESIGN_CONTRACT_v0.1.json",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_contract",
+      "description": "Defines the 16-slide v2 pitch content, claims, evidence states, visuals and architecture alignment rules.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": ["pitch deck v2 content and design execution fields"]
+    },
+    {
+      "path": "docs/architecture/ADR-002-personal-enterprise-digital-twin-thesis.md",
+      "category": "ARCH",
+      "artifact_role": "architecture_decision",
+      "description": "Records the thesis that Personal and Enterprise Digital Twins are distinct scopes connected by governed relationships.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": ["personal-enterprise twin thesis decision"]
+    },
+    {
+      "path": "docs/architecture/ADR-003-personal-enterprise-twin-reference-architecture.md",
+      "category": "ARCH",
+      "artifact_role": "architecture_decision",
+      "description": "Records the reference architecture and nested enterprise twin composition.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": ["personal-enterprise reference architecture decision"]
+    },
+    {
+      "path": "docs/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V2_CONTENT_PLAN.md",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_plan",
+      "description": "Human-readable plan for the v2 pitch deck narrative, slide order, visual rules and success criteria.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": []
+    },
+    {
+      "path": "prompts/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V2_DESIGN_EXECUTION_PROMPT.md",
+      "category": "PITCH",
+      "artifact_role": "presentation_execution_prompt",
+      "description": "Execution prompt for producing the v2 pitch deck from the approved architecture and content contract.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": []
+    },
+    {
       "path": "governance/PROJECT_SCOPE_v0.1.md",
       "category": "GOV",
       "artifact_role": "scope_contract",

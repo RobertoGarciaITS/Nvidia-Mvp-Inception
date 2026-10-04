@@ -82,6 +82,14 @@ The semantic source of truth for the current platform diagram is:
 
 `contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json`
 
+The expanded Personal and Enterprise Digital Twin architecture is governed by:
+
+`contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json`
+
+The maturity semantics are governed by:
+
+`contracts/architecture/DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json`
+
 The canonical repository-native visual representation is:
 
 `assets/architecture/human-intelligence-platform/human-intelligence-platform-overview_v0.1.svg`
@@ -114,7 +122,11 @@ If semantics change:
 The Human Intelligence Platform currently includes these conceptual layers:
 
 ```text
-Domain Twins / Views
+Personal Digital Twin
+Enterprise Digital Twin
+Authorized Relationship Layer
+
+Domain Twins / Permissioned Views
 
 Evidence Graph
 Human Digital Twin Core
@@ -150,7 +162,13 @@ New architecture must be justified by a requirement or experiment.
 
 # 5. Domain model
 
-Current approved conceptual domains:
+The approved architecture has two representation scopes:
+
+- **Personal Digital Twin:** a person's persistent, goal-oriented and permission-aware representation.
+- **Enterprise Digital Twin:** an organization's persistent representation, including organization state and nested People, Asset, Process and Product Twins.
+- **Authorized Relationship Layer:** governed relationships using roles, projects, permissions, skills, goals and outcomes.
+
+Current approved operational domain views:
 
 - Education Twin
 - Professional Twin
@@ -158,7 +176,11 @@ Current approved conceptual domains:
 - Athlete Twin
 - Care Twin
 
-Interpret them as **permissioned domain views/extensions of one Human Twin Core**, not independent identities.
+Interpret the five operational domains as **permissioned domain views/extensions of one Human Twin Core**, not independent identities. They remain the current baseline for implementation scope.
+
+The seven-domain human flourishing model is an **organizational proposal** for the Personal Digital Twin, not a claim that seven domains are implemented. It includes Identity and Self, Health and Vitality, Learning and Capabilities, Work and Contribution, Relationships and Community, Resources and Material Security, and Purpose and Flourishing.
+
+The Enterprise Digital Twin has a separate proposed domain organization: Organization and Identity, People and Capabilities, Resources and Assets, Processes and Operations, Customers and Ecosystem, Risk and Compliance, and Strategy and Outcomes. Treat this as architecture-level scope until an enterprise buyer and use case are validated.
 
 An agent must not assume that all domain data is mutually accessible.
 
@@ -696,8 +718,13 @@ assets/
         └── human-intelligence-platform-overview_v0.1.svg
 
 contracts/
-└── architecture/
-    └── HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json
+├── architecture/
+│   ├── HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json
+│   ├── PERSONAL_ENTERPRISE_DIGITAL_TWIN_CONTRACT_v0.1.json
+│   ├── PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json
+│   └── DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json
+└── presentation/
+    └── HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V2_CONTENT_DESIGN_CONTRACT_v0.1.json
 
 governance/
 ├── PROJECT_SCOPE_v0.1.md
@@ -709,7 +736,7 @@ memory/
 └── AGENT_MEMORY_MANIFEST_v0.1.json
 ```
 
-The snapshot is explanatory only. If it conflicts with the file inventory, use the inventory and report the documentation drift.
+The snapshot is explanatory only. If it conflicts with the file inventory, use the inventory and report the documentation drift. The Personal and Enterprise contracts define architecture semantics; they do not establish production implementation.
 
 Do not assume additional systems are implemented simply because they appear in the long-term architecture.
 

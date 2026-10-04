@@ -43,6 +43,38 @@
       "source_of_truth": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json"
     },
     {
+      "name": "digital_twin_scopes",
+      "category": "architecture",
+      "type": "array",
+      "value": ["Personal Digital Twin", "Enterprise Digital Twin"],
+      "status": "ARCHITECTURE_BASELINE",
+      "source_of_truth": "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json"
+    },
+    {
+      "name": "authorized_relationship_layer",
+      "category": "architecture",
+      "type": "array",
+      "value": ["roles", "projects", "permissions", "skills", "goals", "outcomes"],
+      "status": "ARCHITECTURE_BASELINE",
+      "source_of_truth": "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json"
+    },
+    {
+      "name": "personal_life_domains",
+      "category": "architecture",
+      "type": "array",
+      "value": ["Identity and Self", "Health and Vitality", "Learning and Capabilities", "Work and Contribution", "Relationships and Community", "Resources and Material Security", "Purpose and Flourishing"],
+      "status": "PROPOSED_ORGANIZATIONAL_MODEL",
+      "source_of_truth": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_LIFE_DOMAINS_CONTRACT_v0.1.json"
+    },
+    {
+      "name": "enterprise_twin_domains",
+      "category": "architecture",
+      "type": "array",
+      "value": ["Organization and Identity", "People and Capabilities", "Resources and Assets", "Processes and Operations", "Customers and Ecosystem", "Risk and Compliance", "Strategy and Outcomes"],
+      "status": "PROPOSED_ARCHITECTURE",
+      "source_of_truth": "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json"
+    },
+    {
       "name": "domain_twins",
       "category": "architecture",
       "type": "array",
@@ -165,6 +197,14 @@
       "value": "0.1",
       "status": "BASELINE",
       "source_of_truth": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json"
+    },
+    {
+      "name": "digital_twin_maturity_target",
+      "category": "architecture",
+      "type": "object",
+      "value": {"current_profile_state": "M0-M1", "minimum_product_target": "M3", "long_term_federated_target": "M6"},
+      "status": "ARCHITECTURE_BASELINE",
+      "source_of_truth": "contracts/architecture/DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json"
     },
     {
       "name": "current_phase",
