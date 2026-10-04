@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "artifact_id": "HIP-ARCH-TWIN-TYPES-001",
+  "title": "Personal and Enterprise Digital Twin Architecture Contract",
+  "version": "0.1",
+  "status": "PROPOSED_HYPOTHESIS",
+  "artifact_type": "digital_twin_architecture_contract",
+  "created_date": "2026-10-03",
+  "repository": "RobertoGarciaITS/Nvidia-Mvp-Inception",
+  "thesis": "The core product is a governed platform for managing separate Personal and Enterprise Digital Twins, with authorized relationships between them.",
+  "definition": "A Digital Twin is a persistent, time-aware, evidence-linked computational representation of an entity's state, context, goals, relationships, behavior and outcomes that can be updated by events and used to support human decisions.",
+  "non_definition": "A Digital Twin is not a static profile, user record, CRM contact, directory entry, database row, avatar or collection of attributes without state transitions and feedback.",
+  "twin_types": [
+    {
+      "id": "personal_digital_twin",
+      "name": "Personal Digital Twin",
+      "owner": "Person",
+      "purpose": "Help a person understand, manage and develop identity, capabilities, goals, wellbeing, relationships and progress.",
+      "domain_views": [
+        "Identity and Self",
+        "Health and Vitality",
+        "Learning and Capabilities",
+        "Work and Contribution",
+        "Relationships and Community",
+        "Resources and Material Security",
+        "Purpose and Flourishing"
+      ]
+    },
+    {
+      "id": "enterprise_digital_twin",
+      "name": "Enterprise Digital Twin",
+      "owner": "Enterprise or authorized organization",
+      "purpose": "Help an organization understand, manage and improve its structure, capabilities, resources, processes, goals, risks and outcomes.",
+      "domain_views": [
+        "Identity and Structure",
+        "People and Capabilities",
+        "Resources and Assets",
+        "Processes and Operations",
+        "Customers and Ecosystem",
+        "Risk and Compliance",
+        "Strategy and Outcomes"
+      ]
+    }
+  ],
+  "fundamental_components": {
+    "required_core": [
+      {
+        "id": "entity_identity",
+        "name": "Entity Identity",
+        "question": "What entity does this twin represent?"
+      },
+      {
+        "id": "state_model",
+        "name": "State Model",
+        "question": "What is true about the entity now?"
+      },
+      {
+        "id": "event_history",
+        "name": "Event History",
+        "question": "What changed, when and because of what event?"
+      },
+      {
+        "id": "context_model",
+        "name": "Context Model",
+        "question": "Under what situation, environment or conditions is the state interpreted?"
+      },
+      {
+        "id": "goals_and_intentions",
+        "name": "Goals and Intentions",
+        "question": "What is the entity trying to achieve?"
+      },
+      {
+        "id": "evidence_and_provenance",
+        "name": "Evidence and Provenance",
+        "question": "How do we know the state or capability claim?"
+      },
+      {
+        "id": "relationships_and_dependencies",
+        "name": "Relationships and Dependencies",
+        "question": "What other entities, resources or systems affect the twin?"
+      },
+      {
+        "id": "behavior_and_transition_rules",
+        "name": "Behavior and Transition Rules",
+        "question": "How can the state change when events or actions occur?"
+      },
+      {
+        "id": "actions_and_feedback",
+        "name": "Actions and Feedback",
+        "question": "What action was taken and what outcome followed?"
+      },
+      {
+        "id": "governance_and_access",
+        "name": "Governance and Access",
+        "question": "Who may view, update, infer or act on the twin, for what purpose?"
+      },
+      {
+        "id": "time_and_versioning",
+        "name": "Time and Versioning",
+        "question": "How did the twin evolve and what was true at a prior time?"
+      }
+    ],
+    "advanced_capabilities": [
+      "simulation",
+      "prediction",
+      "scenario_comparison",
+      "optimization",
+      "agent_assistance",
+      "anomaly_detection",
+      "cross_twin_workflow"
+    ]
+  },
+  "twin_lifecycle": [
+    "observe",
+    "ingest_event",
+    "validate_evidence",
+    "update_state",
+    "interpret_context",
+    "compare_with_goals",
+    "recommend_or_decide",
+    "act",
+    "measure_outcome",
+    "learn_and_update"
+  ],
+  "cross_twin_relationship": {
+    "name": "Authorized Personal-Enterprise Relationship",
+    "purpose": "Represent the governed relationship between a person and an enterprise without merging their identities or unrestrictedly copying their data.",
+    "shared_context_examples": [
+      "role",
+      "project",
+      "authorization",
+      "skill requirement",
+      "learning objective",
+      "work outcome"
+    ],
+    "rules": [
+      "Personal and Enterprise Twins remain separate systems of representation.",
+      "The relationship has its own purpose, permissions, validity period and audit trail.",
+      "Personal data is not automatically owned by the enterprise.",
+      "Enterprise data is not automatically visible to the person beyond the authorized view.",
+      "Cross-twin actions require human or governed organizational authorization.",
+      "Sensitive personal data is excluded unless explicitly required, consented and controlled."
+    ]
+  },
+  "distinction_from_profile_database": {
+    "profile_database": [
+      "Stores attributes or records",
+      "Usually represents a current snapshot",
+      "May not preserve event causality or provenance",
+      "Does not require a state-transition model",
+      "Does not inherently model goals, behavior or outcomes",
+      "Does not inherently support simulation or feedback"
+    ],
+    "digital_twin": [
+      "Maintains a time-aware state model",
+      "Updates through events and validated evidence",
+      "Preserves provenance and confidence of claims",
+      "Models goals, context, relationships and dependencies",
+      "Defines state transitions and behavior rules",
+      "Connects actions to outcomes and feedback",
+      "Supports human decisions, scenarios or governed agent assistance",
+      "Enforces identity, access, purpose and audit controls"
+    ]
+  },
+  "mvp_boundary": {
+    "rule": "Do not build both full twin types at once.",
+    "first_vertical_slice": "One bounded Personal Digital Twin use case with identity, consent, state, events, evidence, one goal and one human decision flow.",
+    "enterprise_twin": "Conceptual and contract-level until an enterprise use case and buyer are validated.",
+    "student_profile": "A possible initial Personal Digital Twin vertical slice; it is not the complete Personal Digital Twin."
+  },
+  "change_control": {
+    "status_is_not_canonical": true,
+    "promotion_requires": [
+      "ADR approval",
+      "Personal Twin boundary definition",
+      "Enterprise Twin boundary definition",
+      "cross-twin permission matrix",
+      "data sensitivity model",
+      "one validated use case",
+      "updated architecture diagram",
+      "updated project scope"
+    ],
+    "breaking_changes_require_version_bump": true
+  }
+}

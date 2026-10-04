@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "artifact_id": "HIP-ARCH-TWIN-REFERENCE-001",
+  "title": "Human Intelligence Platform — Personal and Enterprise Digital Twin Reference Architecture",
+  "version": "0.2",
+  "status": "PROPOSED_ARCHITECTURE",
+  "artifact_type": "reference_architecture_contract",
+  "created_date": "2026-10-03",
+  "repository": "RobertoGarciaITS/Nvidia-Mvp-Inception",
+  "supersedes": "PERSONAL_ENTERPRISE_DIGITAL_TWIN_CONTRACT_v0.1.json",
+  "platform": {
+    "name": "Human Intelligence Platform",
+    "thesis": "A Human-in-the-Loop Digital Twin platform where people and organizations manage governed digital representations to achieve measurable progress.",
+    "system_boundary": "The platform manages Personal Digital Twins, Enterprise Digital Twins and authorized relationships between them."
+  },
+  "architecture": {
+    "personal_digital_twin": {
+      "id": "personal_digital_twin",
+      "owner": "Person",
+      "purpose": "Represent and help manage the person's evolving identity, state, capabilities, goals, relationships and outcomes.",
+      "domains": [
+        {"id": "identity_self", "name": "Identity and Self"},
+        {"id": "health_vitality", "name": "Health and Vitality"},
+        {"id": "learning_capabilities", "name": "Learning and Capabilities"},
+        {"id": "work_contribution", "name": "Work and Contribution"},
+        {"id": "relationships_community", "name": "Relationships and Community"},
+        {"id": "resources_security", "name": "Resources and Security"},
+        {"id": "purpose_flourishing", "name": "Purpose and Flourishing"}
+      ]
+    },
+    "enterprise_digital_twin": {
+      "id": "enterprise_digital_twin",
+      "owner": "Enterprise or authorized organization",
+      "purpose": "Represent and help manage the organization's structure, people, assets, processes, ecosystem, risks and outcomes.",
+      "domains": [
+        {"id": "organization_identity", "name": "Organization and Identity"},
+        {"id": "people_capabilities", "name": "People and Capabilities"},
+        {"id": "resources_assets", "name": "Resources and Assets"},
+        {"id": "processes_operations", "name": "Processes and Operations"},
+        {"id": "customers_ecosystem", "name": "Customers and Ecosystem"},
+        {"id": "risk_compliance", "name": "Risk and Compliance"},
+        {"id": "strategy_outcomes", "name": "Strategy and Outcomes"}
+      ],
+      "nested_twins": [
+        {"id": "people_twins", "name": "People Twins", "subject_type": "person"},
+        {"id": "asset_twins", "name": "Asset Twins", "subject_type": "asset"},
+        {"id": "process_twins", "name": "Process Twins", "subject_type": "process"},
+        {"id": "product_twins", "name": "Product Twins", "subject_type": "product"},
+        {"id": "organization_state", "name": "Organization State", "subject_type": "organization"}
+      ]
+    },
+    "authorized_relationship_layer": {
+      "id": "authorized_relationship_layer",
+      "purpose": "Represent governed relationships between Personal and Enterprise Digital Twins without merging their identities or ownership.",
+      "relationship_types": [
+        "roles",
+        "projects",
+        "permissions",
+        "skills",
+        "goals",
+        "outcomes"
+      ]
+    }
+  },
+  "digital_twin_minimum_model": {
+    "required_components": [
+      "entity_identity",
+      "state_model",
+      "event_history",
+      "context_model",
+      "goals_and_intentions",
+      "evidence_and_provenance",
+      "relationships_and_dependencies",
+      "behavior_and_transition_rules",
+      "actions_and_feedback",
+      "governance_and_access",
+      "time_and_versioning"
+    ],
+    "minimum_behavior": [
+      "observe",
+      "receive_event",
+      "validate_evidence",
+      "update_state",
+      "evaluate_against_goals",
+      "support_human_decision",
+      "record_action",
+      "measure_outcome",
+      "update_twin"
+    ]
+  },
+  "data_and_control_flow": [
+    "source_or_event",
+    "evidence_and_provenance",
+    "twin_state_update",
+    "contextual_interpretation",
+    "goal_comparison",
+    "human_or_agent_recommendation",
+    "human_decision_or_authorized_action",
+    "outcome_measurement",
+    "feedback_event"
+  ],
+  "governance": {
+    "default_cross_twin_access": "DENY",
+    "required_controls": [
+      "identity",
+      "consent_or_authorization",
+      "purpose_limitation",
+      "minimum_required_data",
+      "role_or_domain_access",
+      "retention",
+      "revocation",
+      "audit",
+      "human_oversight"
+    ],
+    "ownership_rules": [
+      "A Personal Digital Twin is controlled by the person subject to applicable law and agreements.",
+      "An Enterprise Digital Twin is controlled by the enterprise or authorized organization.",
+      "A relationship record has its own owner, purpose, permissions and validity period.",
+      "Enterprise ownership does not imply ownership of a person's complete Personal Digital Twin.",
+      "Personal consent does not grant unrestricted access to enterprise internal data."
+    ]
+  },
+  "distinction_from_profile_system": {
+    "profile_system": "Stores descriptive attributes about a user or organization.",
+    "digital_twin": "Maintains a time-aware, evidence-linked and governed model of an entity's state, goals, relationships, transitions, actions and outcomes.",
+    "required_proof_for_twin_claim": [
+      "state can be updated by events",
+      "claims link to evidence or provenance",
+      "goals can be evaluated",
+      "actions and outcomes are recorded",
+      "the model supports a decision or operational workflow",
+      "access and ownership are enforced"
+    ]
+  },
+  "mvp_boundary": {
+    "rule": "Implement one bounded vertical slice before building the full platform.",
+    "personal_first_candidate": "Learning and Capabilities view for a student",
+    "enterprise_first_candidate": "To be validated; no enterprise buyer or use case is selected.",
+    "required_first_slice": [
+      "one owner",
+      "one state model",
+      "one event type",
+      "one evidence type",
+      "one goal",
+      "one human decision",
+      "one measurable outcome"
+    ]
+  },
+  "change_control": {
+    "canonical_status": "NOT_YET_BASELINE",
+    "promotion_requires": [
+      "ADR approval",
+      "updated project scope",
+      "updated taxonomy",
+      "updated file inventory and memory routing",
+      "architecture diagram update",
+      "personal-enterprise permission matrix",
+      "validated personal use case",
+      "validated enterprise use case",
+      "privacy and security review"
+    ],
+    "breaking_changes_require_version_bump": true
+  }
+}

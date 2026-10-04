@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "artifact_id": "HIP-ARCH-LIFE-DOMAINS-001",
+  "title": "Human Intelligence Platform — Universal Human Life Domains",
+  "version": "0.1",
+  "status": "PROPOSED_HYPOTHESIS",
+  "artifact_type": "architecture_domain_contract",
+  "created_date": "2026-10-03",
+  "repository": "RobertoGarciaITS/Nvidia-Mvp-Inception",
+  "relationship_to_canonical_architecture": "Parallel alternative; does not replace HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json",
+  "purpose": "Define a universal life-domain ontology for future Human Digital Twin views and extensions.",
+  "design_thesis": "One person manages one Human Digital Twin Core across multiple permissioned areas of life to support human flourishing and measurable progress.",
+  "human_digital_twin_core": {
+    "identity": "Persistent identity controlled by the person",
+    "state": "Current longitudinal state",
+    "context": "Authorized situational context",
+    "goals": "Person-defined goals and desired outcomes",
+    "events": "Relevant events that update state, evidence and progress"
+  },
+  "universal_life_domains": [
+    {
+      "id": "identity_self",
+      "name": "Identity and Self",
+      "purpose": "Understand identity, values, strengths, emotional context, self-knowledge and personal development.",
+      "capability_examples": ["self_knowledge", "values", "strengths", "personal_development"],
+      "sensitivity": "SENSITIVE_PERSONAL"
+    },
+    {
+      "id": "health_vitality",
+      "name": "Health and Vitality",
+      "purpose": "Manage physical health, mental wellbeing, habits, energy, sleep, activity and vitality.",
+      "capability_examples": ["health_habits", "wellbeing", "energy_management", "physical_activity"],
+      "sensitivity": "SENSITIVE_PERSONAL"
+    },
+    {
+      "id": "learning_capabilities",
+      "name": "Learning and Capabilities",
+      "purpose": "Develop knowledge, skills, credentials, competencies and learning goals.",
+      "capability_examples": ["knowledge", "skills", "competencies", "credentials", "learning_goals"],
+      "sensitivity": "PERSONAL"
+    },
+    {
+      "id": "work_contribution",
+      "name": "Work and Contribution",
+      "purpose": "Manage career, work, projects, experience, collaboration, productivity and contribution.",
+      "capability_examples": ["experience", "projects", "roles", "collaboration", "contribution"],
+      "sensitivity": "PERSONAL"
+    },
+    {
+      "id": "relationships_community",
+      "name": "Relationships and Community",
+      "purpose": "Support relationships, family, friendships, networks, belonging and community participation.",
+      "capability_examples": ["support_networks", "belonging", "collaboration", "community_participation"],
+      "sensitivity": "SENSITIVE_PERSONAL"
+    },
+    {
+      "id": "resources_security",
+      "name": "Resources and Material Security",
+      "purpose": "Manage income, resources, financial security, material conditions and economic goals.",
+      "capability_examples": ["financial_literacy", "resource_management", "economic_goals", "material_security"],
+      "sensitivity": "RESTRICTED"
+    },
+    {
+      "id": "purpose_flourishing",
+      "name": "Purpose and Flourishing",
+      "purpose": "Connect life goals, meaning, creativity, spirituality, civic impact, contribution and perceived progress.",
+      "capability_examples": ["purpose", "meaning", "creativity", "civic_impact", "life_goals"],
+      "sensitivity": "SENSITIVE_PERSONAL"
+    }
+  ],
+  "specialized_views": {
+    "Education Twin": "learning_capabilities",
+    "Professional Twin": "work_contribution",
+    "Worker Twin": "work_contribution",
+    "Athlete Twin": "health_vitality",
+    "Care Twin": ["health_vitality", "relationships_community"]
+  },
+  "interconnection_rules": [
+    "All domains are permissioned views or extensions of one Human Digital Twin Core.",
+    "Domains must not create independent identities for the same person.",
+    "Cross-domain access is denied by default.",
+    "Cross-domain use requires identity, consent, purpose, minimum required data, authorized access and audit.",
+    "A capability or event may be referenced across domains without copying unrestricted source data.",
+    "The person remains in the decision loop for consequential recommendations or actions.",
+    "Sensitive and restricted data requires stronger authorization and narrower purpose.",
+    "The presence of a domain in this contract does not imply implementation or integration."
+  ],
+  "mvp_rule": {
+    "domain_count": 1,
+    "rule": "Implement one domain view at a time after problem and beachhead validation.",
+    "initial_candidate": "learning_capabilities",
+    "initial_candidate_status": "PROPOSED_NOT_VALIDATED"
+  },
+  "maturity": {
+    "ontology_status": "HYPOTHESIS",
+    "implementation_status": "NOT_IMPLEMENTED",
+    "validation_required": [
+      "human flourishing domain research",
+      "customer and user validation",
+      "privacy and governance review",
+      "domain boundary review",
+      "cross-domain data-flow review"
+    ]
+  },
+  "change_control": {
+    "canonical_contract_unchanged": true,
+    "promotion_requires": [
+      "ADR approval",
+      "domain decision matrix",
+      "updated architecture diagram",
+      "updated project scope",
+      "updated taxonomy and variable registry",
+      "privacy and access-control review"
+    ],
+    "breaking_changes_require_version_bump": true
+  }
+}

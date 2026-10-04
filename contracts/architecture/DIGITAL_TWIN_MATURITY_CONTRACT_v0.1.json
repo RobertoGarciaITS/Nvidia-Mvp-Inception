@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "artifact_id": "HIP-ARCH-TWIN-MATURITY-001",
+  "title": "Human Intelligence Platform — Digital Twin Maturity Contract",
+  "version": "0.1",
+  "status": "PROPOSED_FRAMEWORK",
+  "artifact_type": "maturity_model_contract",
+  "created_date": "2026-10-03",
+  "repository": "RobertoGarciaITS/Nvidia-Mvp-Inception",
+  "purpose": "Assess whether a Personal or Enterprise Digital Twin is a profile, a synchronized model, a decision-support system or a validated human-governed closed loop.",
+  "important_distinction": "The first levels describe representations that may not yet qualify as a full Digital Twin. A Digital Twin claim requires a defined entity, state, update mechanism, context, evidence and use-case outcome.",
+  "maturity_levels": [
+    {"level": "M0", "name": "Concept or Profile", "classification": "NOT_A_DIGITAL_TWIN_YET", "description": "Static concept, profile database, directory or manually maintained record.", "minimum_capabilities": ["entity_identity", "descriptive_attributes"], "required_evidence": ["defined subject", "defined use case"], "prohibited_claim": "Do not claim a functional Digital Twin."},
+    {"level": "M1", "name": "Structured Digital Representation", "classification": "FOUNDATIONAL_MODEL", "description": "Structured representation with an explicit state model, domain vocabulary, ownership and access rules.", "minimum_capabilities": ["entity_identity", "state_model", "domain_model", "ownership", "access_control", "time_metadata"], "required_evidence": ["schema validation", "state definition", "access test"], "prohibited_claim": "Do not claim synchronization, prediction or operational feedback without evidence."},
+    {"level": "M2", "name": "Event-Linked or Observed Twin", "classification": "EARLY_DIGITAL_TWIN", "description": "The representation updates from identified events or observations with provenance and timestamps.", "minimum_capabilities": ["event_history", "evidence_and_provenance", "state_update", "update_frequency", "data_quality"], "required_evidence": ["replayed event updates state", "provenance trace", "stale-data handling"], "boundary": "One-way observation or event ingestion may still be called a digital shadow in some taxonomies."},
+    {"level": "M3", "name": "Contextual Human-in-the-Loop Twin", "classification": "OPERATIONAL_DECISION_SUPPORT", "description": "The twin interprets state in context, evaluates goals and supports a documented human decision or action.", "minimum_capabilities": ["context_model", "goals_and_intentions", "relationships_and_dependencies", "human_decision_flow", "audit"], "required_evidence": ["context changes interpretation", "goal comparison", "human decision recorded", "permission test"], "product_relevance": "Minimum target for the Human Intelligence Platform thesis."},
+    {"level": "M4", "name": "Predictive or Scenario Twin", "classification": "PREDICTIVE_DECISION_SUPPORT", "description": "The twin forecasts possible future states or compares what-if scenarios using validated models.", "minimum_capabilities": ["behavior_and_transition_rules", "forecasting_or_simulation", "uncertainty", "scenario_comparison", "validation"], "required_evidence": ["backtest or validation set", "uncertainty reporting", "scenario result", "decision usefulness"], "prohibited_claim": "Prediction quality cannot be inferred from a model merely existing."},
+    {"level": "M5", "name": "Prescriptive or Closed-Loop Twin", "classification": "HUMAN_GOVERNED_ACTION", "description": "The twin recommends or initiates authorized actions, measures outcomes and updates itself through feedback.", "minimum_capabilities": ["actions_and_feedback", "outcome_measurement", "policy_guardrails", "rollback_or_recovery", "human_oversight"], "required_evidence": ["authorized action", "measured outcome", "feedback update", "failure handling", "human override"], "boundary": "Autonomous action is never implied by maturity alone; authority must be explicitly governed."},
+    {"level": "M6", "name": "Federated System of Twins", "classification": "INTEROPERABLE_SYSTEM_OF_SYSTEMS", "description": "Multiple twins interoperate through explicit contracts, synchronized relationships and governed cross-twin workflows.", "minimum_capabilities": ["cross_twin_relationships", "interoperability", "identity_federation", "contract_versioning", "cross_twin_audit", "system_of_systems_observability"], "required_evidence": ["two or more interoperating twins", "permissioned data exchange", "contract compatibility", "end-to-end outcome"], "product_relevance": "Long-term target for Personal Digital Twin, Enterprise Digital Twin and relationship workflows."}
+  ],
+  "maturity_dimensions": ["entity_and_identity", "state_and_time", "events_and_synchronization", "evidence_and_provenance", "context_and_goals", "relationships_and_interoperability", "behavior_and_prediction", "decision_and_action", "feedback_and_outcomes", "governance_security_and_human_control", "validation_uncertainty_and_quality"],
+  "assessment_rules": [
+    "A twin is assessed per use case, not only per platform brand.",
+    "The highest claimed level is capped by the weakest required capability or missing evidence.",
+    "A static profile cannot be promoted to a twin by renaming it.",
+    "Synchronization frequency and fidelity must be defined for the use case; real-time is not universally required.",
+    "Personal, enterprise and asset twins may have different update frequencies, evidence standards and access policies.",
+    "Maturity level does not replace security, privacy, validation or regulatory review.",
+    "Every promotion requires an evidence record and a decision owner."
+  ],
+  "current_project_assessment": {"architecture_contracts": "M1_PROPOSED", "student_profile_if_implemented_alone": "M1_FOUNDATIONAL_MODEL", "minimum_target": "M3_CONTEXTUAL_HUMAN_IN_THE_LOOP_TWIN", "long_term_target": "M6_FEDERATED_SYSTEM_OF_TWINS", "current_evidence_gap": "No production source code or executed event-to-state experiment is currently present in the repository."}
+}
