@@ -372,6 +372,41 @@ ONE Agent
 
 ---
 
+## 10A. Business model hypothesis
+
+The platform's business model hypothesis is broader than the first student use case. Human Intelligence Platform may operate through three related motions:
+
+```text
+Human Intelligence Platform
+│
+├── B2C — Business to Customer
+│   └── A person manages a Personal Digital Twin
+│
+├── B2E — Business to Enterprise
+│   └── An organization manages an Enterprise Digital Twin
+│
+└── B2B — Business to Business
+    └── Organizations interact through authorized Digital Twin relationships
+```
+
+### B2C — Personal Digital Twin
+
+The individual manages identity, evidence, capabilities, goals, context and measurable progress. The student is only the first provisional beachhead for validating one product loop. The student is not the complete market definition or the complete business model.
+
+### B2E — Enterprise Digital Twin
+
+The organization manages its organizational state and nested People, Asset, Process and Product Twins. This motion requires a validated enterprise use case, buyer, access model and outcome.
+
+### B2B — Authorized organizational relationships
+
+Organizations may collaborate through projects, roles, permissions, skills, goals and outcomes. The Authorized Relationship Layer governs what context each organization may access and for what purpose.
+
+The business model should be evaluated through a master canvas plus separate B2C, B2E and B2B canvases. The current status of all three motions is **business hypothesis**, not validated commercial traction.
+
+> Terminology note: B2E commonly means Business to Employee in other contexts. In this repository, B2E explicitly means Business to Enterprise.
+
+---
+
 ## 11. Evidence maturity model
 
 The project must explicitly distinguish:

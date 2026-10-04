@@ -127,6 +127,25 @@
       "source_of_truth": "governance/PROJECT_SCOPE_v0.1.md"
     },
     {
+      "name": "business_model_motions",
+      "category": "business",
+      "type": "array",
+      "value": ["B2C Business to Customer", "B2E Business to Enterprise", "B2B Business to Business"],
+      "status": "HYPOTHESIS",
+      "source_of_truth": "governance/PROJECT_SCOPE_v0.1.md"
+    },
+    {
+      "name": "business_model_canvas_structure",
+      "category": "business",
+      "type": "object",
+      "value": {
+        "master_canvas": "Human Intelligence Platform",
+        "segment_canvases": ["B2C Personal Digital Twin", "B2E Enterprise Digital Twin", "B2B Authorized Digital Twin relationships"]
+      },
+      "status": "HYPOTHESIS",
+      "source_of_truth": "governance/PROJECT_SCOPE_v0.1.md"
+    },
+    {
       "name": "initial_buyer",
       "category": "business",
       "type": "string",

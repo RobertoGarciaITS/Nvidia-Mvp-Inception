@@ -84,6 +84,45 @@ The specific beachhead, domain view and agent remain subject to validation.
 
 ---
 
+## 3A. Business model hypothesis
+
+The project hypothesis is an integral Digital Twin platform with three related business motions:
+
+```text
+Human Intelligence Platform
+│
+├── B2C — Business to Customer
+│   └── Personal Digital Twin managed by an individual
+│
+├── B2E — Business to Enterprise
+│   └── Enterprise Digital Twin managed by an organization
+│
+└── B2B — Business to Business
+    └── Authorized relationships between organizations and their Digital Twins
+```
+
+These motions share the Human Twin Core, Evidence Graph, Capability Graph, governance model and Authorized Relationship Layer. They are not three unrelated products.
+
+### B2C
+
+The customer is an individual who manages a Personal Digital Twin. The student is the first provisional beachhead for testing one domain view and one product loop. The student does not define the complete market, product or business model.
+
+### B2E
+
+The customer is an enterprise or organization that manages an Enterprise Digital Twin, including organizational state and nested People, Asset, Process and Product Twins. Enterprise buyer, use case, pricing and access model remain to be validated.
+
+### B2B
+
+The customer relationship involves organizations collaborating through projects, roles, permissions, skills, goals and outcomes. The Authorized Relationship Layer determines what context may be shared and for what purpose.
+
+### Scope interpretation
+
+The business model must be evaluated using a master Business Model Canvas plus separate B2C, B2E and B2B canvases. This section records a **business hypothesis**, not validated market evidence.
+
+> Terminology note: B2E commonly means Business to Employee in other contexts. In this project, B2E explicitly means Business to Enterprise.
+
+---
+
 ## 4. Platform domains
 
 Current approved conceptual domains:
