@@ -1,0 +1,693 @@
+{
+  "contract_id": "HIPP-DECK-V3-CONTENT-DESIGN",
+  "version": "0.1",
+  "status": "DRAFT_FOR_EXECUTION",
+  "language": "es-MX",
+  "project": "Human Intelligence Platform",
+  "deck_version": "v3",
+  "slide_count": 16,
+  "source_of_truth": [
+    "governance/PROJECT_SCOPE_v0.1.md",
+    "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_CONTRACT_v0.1.json",
+    "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json",
+    "contracts/architecture/DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json",
+    "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_LIFE_DOMAINS_CONTRACT_v0.1.json",
+    "docs/NVIDIA_INCEPTION_SLIDE_CONTENT_SPEC_v0.1.md"
+  ],
+  "thesis": "Human Intelligence Platform es una plataforma Human-in-the-Loop Digital Twin para que las personas gestionen su Gemelo Digital Personal y las organizaciones gestionen su Gemelo Digital Empresarial, conectados mediante relaciones autorizadas para producir progreso medible y verificable.",
+  "mvp_boundary": "Identity + Consent + Human Twin Core + Events + Evidence Graph + Capability Graph + ONE Domain View + ONE Agent",
+  "architecture_layers": [
+    "Personal Digital Twin",
+    "Enterprise Digital Twin",
+    "Authorized Relationship Layer",
+    "Evidence Graph",
+    "Capability Graph",
+    "AI Agent Layer",
+    "Human Decision and Outcome Feedback"
+  ],
+  "claim_rules": {
+    "allowed_labels": [
+      "FACT",
+      "EVIDENCE",
+      "HYPOTHESIS",
+      "ASSUMPTION",
+      "INFERENCE",
+      "PROJECTION",
+      "TO_VALIDATE"
+    ],
+    "prohibited": [
+      "Inventar usuarios, clientes, ingresos, benchmarks, partners, adopción o afiliación NVIDIA",
+      "Presentar un diagrama como evidencia de implementación",
+      "Presentar un perfil o base de datos como Digital Twin completo",
+      "Presentar el Enterprise Digital Twin como si ya estuviera construido"
+    ],
+    "placeholder_rule": "Todo campo pendiente debe conservar TBD, PENDING o TO_VALIDATE hasta contar con evidencia registrada."
+  },
+  "slide_schema": {
+    "required_fields": [
+      "slide_id",
+      "order",
+      "slide_type",
+      "title",
+      "context",
+      "data",
+      "bullets",
+      "body_copy",
+      "visual_type",
+      "chart_series",
+      "chart_format",
+      "claim_status",
+      "source_or_evidence",
+      "design_status",
+      "speaker_note"
+    ],
+    "data_format": "Cada dato debe incluir value, unit si aplica, status y source. Si no existe dato cuantitativo, usar null y explicar por qué.",
+    "chart_rule": "Si la diapositiva no requiere una gráfica cuantitativa, chart_series debe ser [] y chart_format debe indicar el diagrama editable autorizado.",
+    "copy_rule": "El título nombra directamente el tema. El texto es breve, claro, profesional y evita slogans vacíos, flechas ASCII, em-dashes y afirmaciones no sustentadas."
+  },
+  "slide_plan": [
+    {
+      "slide_id": "PITCH-V3-01",
+      "order": 1,
+      "slide_type": "cover_thesis",
+      "title": "Human Intelligence Platform",
+      "context": "Presentar en menos de 15 segundos la tesis integral de producto y su modelo de negocio hipotético.",
+      "data": [
+        {
+          "name": "company",
+          "value": "Totec Tecnologías S.A.S. de C.V.",
+          "status": "FACT",
+          "source": "company record provided by founder"
+        },
+        {
+          "name": "business_model_motions",
+          "value": [
+            "B2C Business to Customer",
+            "B2E Business to Enterprise",
+            "B2B Business to Business"
+          ],
+          "status": "HYPOTHESIS",
+          "source": "governance/PROJECT_SCOPE_v0.1.md"
+        }
+      ],
+      "bullets": [
+        "B2C · Personal Digital Twin",
+        "B2E · Enterprise Digital Twin",
+        "B2B · Authorized Digital Twin relationships"
+      ],
+      "body_copy": "Una plataforma Human-in-the-Loop Digital Twin para personas, empresas y relaciones autorizadas.",
+      "visual_type": "minimal_integral_thesis",
+      "chart_series": [],
+      "chart_format": "Composición editable con Personal Digital Twin, Enterprise Digital Twin y Authorized Relationship Layer, acompañada por la línea B2C · B2E · B2B.",
+      "claim_status": "HYPOTHESIS",
+      "source_or_evidence": "README.md, PROJECT_SCOPE_v0.1.md and approved architecture contracts",
+      "design_status": "CONCEPT_AUTHORIZED",
+      "speaker_note": "El estudiante no aparece en portada. Es sólo el primer beachhead provisional dentro de B2C."
+    },
+    {
+      "slide_id": "PITCH-V3-02",
+      "order": 2,
+      "slide_type": "problem_context",
+      "title": "El contexto humano y organizacional está fragmentado",
+      "context": "Mostrar el problema que hace necesaria una capa persistente de contexto para personas, empresas y relaciones.",
+      "data": [
+        {
+          "name": "human_sources",
+          "value": [
+            "Education",
+            "Certifications",
+            "CV",
+            "GitHub",
+            "Training",
+            "Projects",
+            "Assessments",
+            "Wearables",
+            "Sensors"
+          ],
+          "status": "HYPOTHESIS",
+          "source": "current deck; customer validation pending"
+        },
+        {
+          "name": "organizational_sources",
+          "value": [
+            "Work systems",
+            "Processes",
+            "Assets",
+            "Products",
+            "Compliance records"
+          ],
+          "status": "ARCHITECTURE_HYPOTHESIS",
+          "source": "Enterprise Digital Twin architecture; use-case validation pending"
+        }
+      ],
+      "bullets": [
+        "Cada sistema registra una parte de la historia humana u organizacional.",
+        "Ningún sistema conserva por sí solo el contexto longitudinal completo.",
+        "Las decisiones se toman con evidencia parcial o sin autorización suficiente."
+      ],
+      "body_copy": "La fragmentación del contexto limita la visibilidad de capacidades, relaciones, decisiones y resultados.",
+      "visual_type": "human_organizational_fragmentation",
+      "chart_series": [],
+      "chart_format": "Diagrama editable con dos bandas: fuentes humanas y fuentes organizacionales, convergiendo en contexto incompleto. No usar como gráfica cuantitativa.",
+      "claim_status": "HYPOTHESIS_TO_VALIDATE",
+      "source_or_evidence": "Current deck thesis, README architecture and customer/workflow validation pending",
+      "design_status": "RESEARCH_REQUIRED",
+      "speaker_note": "La versión final debe agregar usuario, comprador, workflow y consecuencia comprobados. No inventar cifras de pérdidas u oportunidades."
+    },
+    {
+      "slide_id": "PITCH-V3-03",
+      "order": 3,
+      "slide_type": "why_now_missing_context_layer",
+      "title": "Los agentes necesitan contexto humano autorizado",
+      "context": "Explicar por qué la convergencia tecnológica crea una oportunidad para una capa Digital Twin persistente, con evidencia y permisos.",
+      "data": [
+        {
+          "name": "agents_need_context",
+          "value": "AI agents require relevant context to support decisions responsibly.",
+          "status": "TO_VALIDATE",
+          "source": "technical evidence and benchmark pending"
+        },
+        {
+          "name": "capabilities_change",
+          "value": "Human capabilities and evidence evolve over time.",
+          "status": "HYPOTHESIS",
+          "source": "product thesis; domain validation pending"
+        },
+        {
+          "name": "trust_requires_consent",
+          "value": "Human context requires purpose limitation, provenance and consent.",
+          "status": "GOVERNANCE_BASELINE",
+          "source": "PROJECT_SCOPE_v0.1.md"
+        }
+      ],
+      "bullets": [
+        "Los agentes pueden asistir decisiones, pero necesitan contexto persistente y relevante.",
+        "La evidencia y las capacidades cambian con el tiempo.",
+        "El acceso debe respetar propósito, procedencia, permisos y control humano."
+      ],
+      "body_copy": "La oportunidad es una capa Digital Twin persistente, basada en evidencia y autorizada para personas, empresas y sus relaciones.",
+      "visual_type": "technology_convergence_to_twin_layer",
+      "chart_series": [],
+      "chart_format": "Diagrama editable de convergencia: agentic AI, evidence graphs, capability intelligence and governance hacia una Digital Twin context layer.",
+      "claim_status": "HYPOTHESIS_TO_VALIDATE",
+      "source_or_evidence": "README.md, governance contracts and benchmark/research evidence pending",
+      "design_status": "RESEARCH_REQUIRED",
+      "speaker_note": "No afirmar que los agentes están listos en términos absolutos. La diapositiva debe presentar una oportunidad y conservar las condiciones de validación."
+    },
+    {
+      "slide_id": "PITCH-V3-04",
+      "order": 4,
+      "slide_type": "platform_architecture",
+      "title": "Una plataforma, dos gemelos y relaciones autorizadas",
+      "context": "Mostrar la arquitectura integral aprobada.",
+      "data": [
+        {
+          "name": "architecture",
+          "value": [
+            "Personal Digital Twin",
+            "Enterprise Digital Twin",
+            "Authorized Relationship Layer"
+          ],
+      "status": "PROPOSED_ARCHITECTURE",
+          "source": "PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json"
+        }
+      ],
+      "bullets": [
+        "El Personal Twin representa la identidad, estado, capacidades, metas y resultados de una persona.",
+        "El Enterprise Twin representa la organización, su estado y sus twins anidados.",
+        "La relación entre ambos depende de roles, proyectos, permisos, skills, goals y outcomes."
+      ],
+      "body_copy": "La plataforma conecta Personal y Enterprise Digital Twins sin fusionar sus identidades ni abrir el acceso por defecto.",
+      "visual_type": "editable_layered_architecture",
+      "chart_series": [],
+      "chart_format": "Diagrama jerárquico editable: Personal Digital Twin + Enterprise Digital Twin + Authorized Relationship Layer. Mostrar B2C, B2E y B2B como modalidades, no como componentes técnicos.",
+      "claim_status": "PROPOSED_ARCHITECTURE",
+      "source_or_evidence": "PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json; architecture promotion still pending",
+      "design_status": "CONCEPT_AUTHORIZED",
+      "speaker_note": "Presentar la arquitectura como referencia propuesta. El contrato exige validación personal, empresarial, de permisos y de seguridad antes de promoverla a baseline."
+    },
+    {
+      "slide_id": "PITCH-V3-05",
+      "order": 5,
+      "slide_type": "digital_twin_operating_loop",
+      "title": "Cada decisión actualiza el estado del Digital Twin",
+      "context": "Mostrar cómo eventos, evidencia, estado, capacidades, asistencia, decisión y outcomes forman el loop operativo del producto.",
+      "data": [
+        {
+          "name": "operating_loop",
+          "value": [
+            "identity and consent",
+            "events",
+            "evidence",
+            "twin state update",
+            "capabilities and goals",
+            "authorized context",
+            "agent assistance",
+            "human or authorized organizational decision",
+            "action and outcome",
+            "new evidence"
+          ],
+          "status": "ARCHITECTURE_HYPOTHESIS",
+          "source": "README.md and HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json"
+        }
+      ],
+      "bullets": [
+        "Los eventos generan evidencia y actualizan el estado del twin.",
+        "Las capacidades y metas se interpretan dentro de un contexto autorizado.",
+        "La decisión humana o autorizada produce un outcome que vuelve como evidencia."
+      ],
+      "body_copy": "El Digital Twin conserva la continuidad entre lo que ocurrió, lo que la evidencia respalda, lo que se decide y lo que cambia.",
+      "visual_type": "closed_loop_process",
+      "chart_series": [],
+      "chart_format": "Ciclo editable para Personal y Enterprise Digital Twins: identity and consent → events → evidence → twin state → capabilities and goals → authorized context → agent assistance → human or authorized organizational decision → outcome → new evidence.",
+      "claim_status": "ARCHITECTURE_HYPOTHESIS",
+      "source_or_evidence": "README.md, PROJECT_SCOPE_v0.1.md and HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json",
+      "design_status": "CONCEPT_AUTHORIZED",
+      "speaker_note": "El loop es una arquitectura propuesta, no evidencia de que exista código funcional. Mostrar el estudiante sólo como una posible primera vertical B2C, no como el alcance del loop."
+    },
+    {
+      "slide_id": "PITCH-V3-06",
+      "order": 6,
+      "slide_type": "enterprise_twin_domains",
+      "title": "Enterprise Digital Twin: la organización como sistema vivo",
+      "context": "Presentar el alcance empresarial y evitar confundirlo con un Asset Twin.",
+      "data": [
+        {
+          "name": "enterprise_domains",
+          "value": [
+            "Organization and Identity",
+            "People and Capabilities",
+            "Resources and Assets",
+            "Processes and Operations",
+            "Customers and Ecosystem",
+            "Risk and Compliance",
+            "Strategy and Outcomes"
+          ],
+          "status": "ARCHITECTURE_APPROVED",
+          "source": "PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json"
+        }
+      ],
+      "bullets": [
+        "People, Asset, Process y Product Twins son twins anidados.",
+        "El Enterprise Twin representa el estado integrado de la organización.",
+        "Un Asset Twin describe un activo, no sustituye al Enterprise Twin."
+      ],
+      "body_copy": "El Enterprise Digital Twin reúne personas, activos, procesos, productos y resultados dentro del contexto de una organización.",
+      "visual_type": "nested_system_architecture",
+      "chart_series": [],
+      "chart_format": "Árbol editable: Enterprise Twin como raíz y cinco familias de twins anidados.",
+      "claim_status": "ARCHITECTURE_APPROVED",
+      "source_or_evidence": "Enterprise twin architecture contract",
+      "design_status": "CONCEPT_AUTHORIZED",
+      "speaker_note": "La primera versión puede mostrar esta capacidad como arquitectura objetivo, no como funcionalidad ya implementada."
+    },
+    {
+      "slide_id": "PITCH-V3-07",
+      "order": 7,
+      "slide_type": "authorized_relationship_layer",
+      "title": "La relación autorizada conecta capacidades con oportunidades",
+      "context": "Explicar cómo se relacionan Personal y Enterprise Twins sin perder control.",
+      "data": [
+        {
+          "name": "relationship_objects",
+          "value": [
+            "roles",
+            "projects",
+            "permissions",
+            "skills",
+            "goals",
+            "outcomes"
+          ],
+          "status": "ARCHITECTURE_APPROVED",
+          "source": "PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json"
+        }
+      ],
+      "bullets": [
+        "La persona controla qué contexto comparte.",
+        "La organización recibe una vista limitada por propósito.",
+        "La relación produce evidencia de participación y resultados."
+      ],
+      "body_copy": "La plataforma transforma una relación autorizada en contexto útil, trazable y revocable.",
+      "visual_type": "relationship_graph",
+      "chart_series": [],
+      "chart_format": "Grafo editable con nodos Person, Enterprise, Project, Role, Skill, Goal y Outcome.",
+      "claim_status": "ARCHITECTURE_APPROVED",
+      "source_or_evidence": "Authorized Relationship Layer contract",
+      "design_status": "CONCEPT_AUTHORIZED",
+      "speaker_note": "La relación autorizada es una capa de gobernanza y de valor de producto, no una simple conexión entre usuarios."
+    },
+    {
+      "slide_id": "PITCH-V3-08",
+      "order": 8,
+      "slide_type": "twin_state_loop",
+      "title": "Cada decisión actualiza el estado del twin",
+      "context": "Mostrar el ciclo operativo del producto.",
+      "data": [
+        {
+          "name": "loop",
+          "value": [
+            "events",
+            "evidence",
+            "state",
+            "capabilities",
+            "permissioned context",
+            "agent",
+            "human decision",
+            "outcome"
+          ],
+          "status": "ARCHITECTURE_APPROVED",
+          "source": "deck architecture and project scope"
+        }
+      ],
+      "bullets": [
+        "Los eventos producen evidencia.",
+        "La evidencia actualiza el estado y las capacidades.",
+        "El resultado vuelve al twin como nueva evidencia."
+      ],
+      "body_copy": "La plataforma conserva la continuidad entre lo que ocurrió, lo que se sabe, lo que se decide y lo que cambió.",
+      "visual_type": "closed_loop_process",
+      "chart_series": [],
+      "chart_format": "Ciclo editable de ocho etapas con entrada de eventos y salida de resultados.",
+      "claim_status": "ARCHITECTURE_HYPOTHESIS",
+      "source_or_evidence": "HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json",
+      "design_status": "CONCEPT_AUTHORIZED",
+      "speaker_note": "El ciclo debe quedar separado de cualquier afirmación de implementación."
+    },
+    {
+      "slide_id": "PITCH-V3-09",
+      "order": 9,
+      "slide_type": "evidence_capability_intelligence",
+      "title": "La capacidad demostrada nace de la evidencia",
+      "context": "Explicar la diferenciación técnica del Evidence Graph y Capability Graph.",
+      "data": [
+        {
+          "name": "graph_objects",
+          "value": [
+            "source",
+            "event",
+            "evidence",
+            "claim",
+            "capability",
+            "context"
+          ],
+          "status": "ARCHITECTURE_APPROVED",
+          "source": "deck and product contracts"
+        }
+      ],
+      "bullets": [
+        "Una afirmación puede ser declarada o respaldada.",
+        "Una capacidad debe conservar su relación con la evidencia.",
+        "Los agentes sólo consultan el contexto que la persona autoriza."
+      ],
+      "body_copy": "La inteligencia no sólo responde qué parece cierto. También conserva por qué lo considera cierto y para qué puede usarlo.",
+      "visual_type": "evidence_to_capability_graph",
+      "chart_series": [],
+      "chart_format": "Grafo editable con dos rutas: claimed capability y evidence-backed capability.",
+      "claim_status": "ARCHITECTURE_HYPOTHESIS",
+      "source_or_evidence": "Evidence and Capability Graph concepts in deck",
+      "design_status": "HYPOTHESIS_LEVEL",
+      "speaker_note": "La mejora frente a un baseline RAG o perfil debe comprobarse con un benchmark posterior."
+    },
+    {
+      "slide_id": "PITCH-V3-10",
+      "order": 10,
+      "slide_type": "human_in_the_loop_governance",
+      "title": "La persona conserva el control sobre su contexto",
+      "context": "Mostrar permisos, gobernanza y decisión humana como parte del producto.",
+      "data": [
+        {
+          "name": "controls",
+          "value": [
+            "identity",
+            "consent",
+            "purpose",
+            "minimum context",
+            "domain access",
+            "audit",
+            "revocation"
+          ],
+          "status": "GOVERNANCE_BASELINE",
+          "source": "PROJECT_SCOPE and architecture contracts"
+        }
+      ],
+      "bullets": [
+        "El acceso depende del propósito.",
+        "La evidencia mantiene procedencia y trazabilidad.",
+        "El agente asiste; la persona decide."
+      ],
+      "body_copy": "La confianza se construye limitando el uso del contexto desde el diseño.",
+      "visual_type": "permission_audit_flow",
+      "chart_series": [],
+      "chart_format": "Flujo editable de autorización, consulta, decisión, auditoría y revocación.",
+      "claim_status": "GOVERNANCE_HYPOTHESIS",
+      "source_or_evidence": "Governance contracts; legal and threat-model validation pending",
+      "design_status": "CONCEPT_AUTHORIZED",
+      "speaker_note": "Mantener visibles los riesgos de vigilancia, discriminación, inferencia incorrecta y automatización excesiva."
+    },
+    {
+      "slide_id": "PITCH-V3-11",
+      "order": 11,
+      "slide_type": "beachhead_mvp",
+      "title": "El primer producto empieza con el estudiante",
+      "context": "Definir el beachhead provisional y el alcance funcional inicial.",
+      "data": [
+        {
+          "name": "beachhead",
+          "value": "student",
+          "status": "PROVISIONAL_HYPOTHESIS",
+          "source": "founder responses recorded in preflight progress"
+        },
+        {
+          "name": "profile_fields",
+          "value": [
+            "name",
+            "program",
+            "career progress",
+            "graduation date",
+            "completed projects",
+            "projects in progress"
+          ],
+          "status": "REQUIREMENT",
+          "source": "FEAT-001-student-talent-profile.md"
+        }
+      ],
+      "bullets": [
+        "El estudiante crea y consulta su perfil privado.",
+        "El perfil conserva proyectos terminados y en proceso.",
+        "La visibilidad externa queda para una fase futura con consentimiento explícito."
+      ],
+      "body_copy": "El MVP prueba si un estudiante puede construir una representación continua y visible de su trayectoria y capacidades.",
+      "visual_type": "mvp_scope_boundary",
+      "chart_series": [],
+      "chart_format": "Diagrama de frontera MVP: incluido, futuro y fuera de alcance.",
+      "claim_status": "PROVISIONAL_HYPOTHESIS",
+      "source_or_evidence": "Feature requirement and preflight progress",
+      "design_status": "READY_FOR_VALIDATION",
+      "speaker_note": "La selección del estudiante es una hipótesis de beachhead, no una validación de mercado."
+    },
+    {
+      "slide_id": "PITCH-V3-12",
+      "order": 12,
+      "slide_type": "maturity_model",
+      "title": "El producto madura de perfil a sistema de twins",
+      "context": "Explicar la ruta de madurez sin exagerar el estado actual.",
+      "data": [
+        {
+          "name": "maturity_levels",
+          "value": [
+            "M0 Concept/Profile",
+            "M1 Structured Representation",
+            "M2 Event-Linked Twin",
+            "M3 Contextual Human-in-the-Loop Twin",
+            "M4 Predictive Twin",
+            "M5 Prescriptive Twin",
+            "M6 Federated System of Twins"
+          ],
+          "status": "ARCHITECTURE_APPROVED",
+          "source": "DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json"
+        }
+      ],
+      "bullets": [
+        "El perfil del estudiante comienza en M0–M1.",
+        "El objetivo mínimo del producto es M3.",
+        "La federación Personal + Enterprise corresponde a M6."
+      ],
+      "body_copy": "Cada nivel agrega estado, sincronización, evidencia, contexto, decisión, resultados y control verificable.",
+      "visual_type": "maturity_ladder",
+      "chart_series": [
+        {
+          "series": "maturity",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "unit": "level",
+          "status": "STRUCTURAL"
+        }
+      ],
+      "chart_format": "Escalera horizontal editable con criterios de entrada y salida por nivel.",
+      "claim_status": "ARCHITECTURE_APPROVED",
+      "source_or_evidence": "Digital Twin maturity contract",
+      "design_status": "CONCEPT_AUTHORIZED",
+      "speaker_note": "No mostrar M4–M6 como capacidades actuales. Son objetivos de evolución."
+    },
+    {
+      "slide_id": "PITCH-V3-13",
+      "order": 13,
+      "slide_type": "nvidia_workload_fit",
+      "title": "NVIDIA fit follows the workload",
+      "context": "Conectar la arquitectura con experimentos técnicos concretos.",
+      "data": [
+        {
+          "name": "candidate_workloads",
+          "value": [
+            "evidence graph embedding and matching",
+            "capability graph inference",
+            "agent model inference",
+            "continuous twin state updates"
+          ],
+          "status": "TO_VALIDATE",
+          "source": "deck slide 12"
+        }
+      ],
+      "bullets": [
+        "Definir workload y baseline antes de elegir tecnología.",
+        "Medir latencia, calidad, costo, seguridad y throughput.",
+        "Seleccionar componentes NVIDIA sólo cuando exista una razón técnica."
+      ],
+      "body_copy": "La solicitud a NVIDIA debe reducir una incertidumbre técnica específica del producto.",
+      "visual_type": "workload_technology_matrix",
+      "chart_series": [],
+      "chart_format": "Matriz editable: workload, requirement, benchmark, NVIDIA option, output y decision.",
+      "claim_status": "TO_VALIDATE",
+      "source_or_evidence": "Technical workload validation pending",
+      "design_status": "BLOCKED_BY_BENCHMARK",
+      "speaker_note": "No presentar afiliación, endorsement ni implementación NVIDIA sin evidencia oficial."
+    },
+    {
+      "slide_id": "PITCH-V3-14",
+      "order": 14,
+      "slide_type": "roadmap_evidence_gates",
+      "title": "Cada fase debe producir evidencia",
+      "context": "Mostrar cómo se pasa de arquitectura a producto validado.",
+      "data": [
+        {
+          "name": "phases",
+          "value": [
+            "P00 Foundation and Governance",
+            "P01 Problem and Beachhead Validation",
+            "P02 Human Twin Core",
+            "P03 Evidence Graph",
+            "P04 Capability Graph",
+            "P05 One Domain View",
+            "P06 One Agent MVP",
+            "P07 Pilot and Evidence",
+            "P08 NVIDIA Workload Evaluation",
+            "P09 Domain Expansion",
+            "P10 Physical AI and Edge Extensions"
+          ],
+          "status": "PROJECT_SCOPE_APPROVED",
+          "source": "PROJECT_SCOPE_v0.1.md"
+        }
+      ],
+      "bullets": [
+        "La fase actual está entre P00 y P01.",
+        "El MVP termina en un loop funcional de un dominio y un agente.",
+        "La expansión empresarial ocurre después de evidencia del beachhead."
+      ],
+      "body_copy": "La hoja de ruta avanza cuando cada fase entrega un artefacto, una prueba y una decisión.",
+      "visual_type": "evidence_gated_roadmap",
+      "chart_series": [],
+      "chart_format": "Roadmap editable por fases con deliverable, hypothesis, evidence y go/no-go.",
+      "claim_status": "PROJECT_PLAN",
+      "source_or_evidence": "PROJECT_SCOPE_v0.1.md",
+      "design_status": "CONCEPT_AUTHORIZED",
+      "speaker_note": "No agregar fechas hasta contar con estimaciones y responsables aprobados."
+    },
+    {
+      "slide_id": "PITCH-V3-15",
+      "order": 15,
+      "slide_type": "company_team_readiness",
+      "title": "La capacidad de ejecución también debe ser verificable",
+      "context": "Conectar la experiencia del fundador y la preparación de la compañía con el producto.",
+      "data": [
+        {
+          "name": "company",
+          "value": "Totec Tecnologías S.A.S. de C.V.",
+          "status": "FOUNDER_PROVIDED",
+          "source": "preflight questionnaire"
+        },
+        {
+          "name": "location",
+          "value": "Saltillo, Coahuila de Zaragoza, México",
+          "status": "FOUNDER_PROVIDED",
+          "source": "preflight questionnaire"
+        }
+      ],
+      "bullets": [
+        "Experiencia en gobierno de datos, BI y cumplimiento industrial.",
+        "La arquitectura está documentada y gobernada.",
+        "La capacidad de desarrollo, equipo y roles abiertos requieren evidencia adicional."
+      ],
+      "body_copy": "La historia del equipo debe demostrar por qué puede convertir esta arquitectura en un producto probado.",
+      "visual_type": "founder_capability_map",
+      "chart_series": [],
+      "chart_format": "Mapa editable de experiencia, responsabilidad, capacidad técnica y brechas.",
+      "claim_status": "PARTIALLY_VERIFIED",
+      "source_or_evidence": "Founder-provided company and biography data; evidence packet pending",
+      "design_status": "INPUTS_REQUIRED",
+      "speaker_note": "No mostrar roles, equipo o métricas de ejecución que no estén documentados."
+    },
+    {
+      "slide_id": "PITCH-V3-16",
+      "order": 16,
+      "slide_type": "ask_and_next_evidence",
+      "title": "Construir progreso humano verificable",
+      "context": "Cerrar con una solicitud concreta basada en las incertidumbres actuales.",
+      "data": [
+        {
+          "name": "asks",
+          "value": [
+            "technical guidance",
+            "cloud credits",
+            "ecosystem access",
+            "pilot partner",
+            "investment",
+            "benchmark support"
+          ],
+          "status": "TO_DEFINE",
+          "source": "deck ask; founder decision pending"
+        }
+      ],
+      "bullets": [
+        "Partner de piloto para validar un solo loop.",
+        "Recursos técnicos para evaluar los workloads definidos.",
+        "Capital y acompañamiento para convertir el MVP en evidencia de producto."
+      ],
+      "body_copy": "Buscamos apoyo para validar el primer Digital Twin Human-in-the-Loop y medir su camino hacia un sistema federado de twins.",
+      "visual_type": "ask_to_evidence_matrix",
+      "chart_series": [],
+      "chart_format": "Matriz editable: gap, resource, experiment, output, milestone y owner.",
+      "claim_status": "TO_VALIDATE",
+      "source_or_evidence": "Ask depends on P01, P06, P07 and P08 evidence",
+      "design_status": "BLOCKED_BY_INPUTS",
+      "speaker_note": "Sustituir los placeholders sólo cuando existan socio, monto, uso de fondos, objetivos y compromisos concretos."
+    }
+  ],
+  "execution_acceptance": [
+    "Las 16 diapositivas usan exactamente la estructura requerida.",
+    "Cada claim tiene status y fuente.",
+    "No se agregan números o tracción no verificados.",
+    "La arquitectura Personal + Enterprise + Relationship Layer aparece explícitamente.",
+    "La diferencia entre perfil, representación digital y Digital Twin queda clara.",
+    "Los diagramas y gráficas quedan editables.",
+    "Los placeholders permanecen visibles cuando faltan entradas del fundador.",
+    "El deck comunica MVP actual y arquitectura objetivo sin confundirlos."
+  ],
+  "supersedes": "contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V2_CONTENT_DESIGN_CONTRACT_v0.1.json"
+}

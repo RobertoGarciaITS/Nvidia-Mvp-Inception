@@ -95,6 +95,33 @@
       "source_of_truth_for": ["pitch deck v2 content and design execution fields"]
     },
     {
+      "path": "contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V3_CONTENT_DESIGN_CONTRACT_v0.1.json",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_contract",
+      "description": "Superseding pitch content contract for v3; revises slides 1-3 to align the thesis, problem and why-now narrative with Personal Twin, Enterprise Twin, authorized relationships and B2C/B2E/B2B.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": ["pitch deck v3 slides 1-3 content and design execution fields"]
+    },
+    {
+      "path": "contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V3_CONTENT_DESIGN_CONTRACT_v0.2.json",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_contract",
+      "description": "Reorders the complete v3 pitch into 18 slides so slides 6-8 present Human Twin Core, Evidence Graph and Capability Graph before domain, relationship and governance views.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": ["complete pitch deck v3 slide sequence and content design fields"]
+    },
+    {
+      "path": "contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V3_CONTENT_DESIGN_CONTRACT_v0.3.json",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_contract",
+      "description": "Complete v3 pitch contract with 19 slides, preserving current deck information and adding permissioned agents, verified progress and a governed pilot-to-ask narrative.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": ["current pitch deck v3 content, slide sequence and evidence states"]
+    },
+    {
       "path": "docs/architecture/ADR-002-personal-enterprise-digital-twin-thesis.md",
       "category": "ARCH",
       "artifact_role": "architecture_decision",
@@ -126,6 +153,15 @@
       "category": "PITCH",
       "artifact_role": "presentation_execution_prompt",
       "description": "Execution prompt for producing the v2 pitch deck from the approved architecture and content contract.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": []
+    },
+    {
+      "path": "prompts/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V3_DESIGN_EXECUTION_PROMPT_v0.1.md",
+      "category": "PITCH",
+      "artifact_role": "presentation_execution_prompt",
+      "description": "Execution prompt for the complete 19-slide v3 pitch deck using the v3.0.3 content contract.",
       "status": "DRAFT_FOR_EXECUTION",
       "read_priority": 8,
       "source_of_truth_for": []
