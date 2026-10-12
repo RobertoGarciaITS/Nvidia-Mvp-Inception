@@ -1,0 +1,96 @@
+{
+  "artifact_id": "HIP-ARCH-BOUNDARY-001",
+  "version": "0.1",
+  "date": "2026-10-12",
+  "status": "DRAFT",
+  "decision_record": "docs/adr/ADR-001-SHARED-CORE-DOMAIN-BOUNDARIES_v0.1.md",
+  "relation": "complements_not_supersedes",
+  "source_contracts": [
+    "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json",
+    "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json"
+  ],
+  "shared_core": [
+    "identity_references",
+    "state_context_goals_events",
+    "evidence_provenance_contract",
+    "capability_semantics",
+    "authorized_context",
+    "access_control",
+    "audit_revocation",
+    "outcome_event_contract"
+  ],
+  "domain_twins": {
+    "education": {
+      "agent": "Tutor Agent",
+      "owns": [
+        "learning_taxonomy",
+        "academic_assessment",
+        "learning_progress"
+      ]
+    },
+    "professional": {
+      "agent": "Career Agent",
+      "owns": [
+        "career_taxonomy",
+        "role_matching",
+        "career_assessment"
+      ]
+    },
+    "worker": {
+      "agent": "Safety Agent",
+      "owns": [
+        "industrial_context",
+        "workplace_risks",
+        "safety_assessment"
+      ]
+    },
+    "athlete": {
+      "agent": "Coach Agent",
+      "owns": [
+        "training_context",
+        "performance_metrics",
+        "training_assessment"
+      ]
+    },
+    "care": {
+      "agent": "Care Agent",
+      "owns": [
+        "care_context",
+        "care_coordination",
+        "care_alert_rules"
+      ]
+    }
+  },
+  "twin_scopes": [
+    "Personal Digital Twin",
+    "Enterprise Digital Twin",
+    "Authorized Relationship Layer"
+  ],
+  "boundary_rules": [
+    "one_logical_human_core_identity",
+    "deny_cross_domain_by_default",
+    "purpose_bound_authorization",
+    "least_privilege_and_minimum_data",
+    "audit_and_revocation",
+    "evidence_provenance_required",
+    "agents_are_not_sources_of_truth",
+    "domain_specific_rules_do_not_belong_in_shared_core",
+    "human_decision_for_high_impact_actions"
+  ],
+  "mvp": {
+    "domain_views": 1,
+    "agents": 1,
+    "required": [
+      "identity",
+      "consent",
+      "events",
+      "human_twin_core",
+      "evidence_graph",
+      "capability_graph",
+      "one_human_decision",
+      "one_measurable_outcome"
+    ]
+  },
+  "evidence_status": "conceptual_not_implemented",
+  "governance_gate": "ADR_REVIEW_REQUIRED"
+}
