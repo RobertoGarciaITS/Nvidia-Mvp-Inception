@@ -1,0 +1,302 @@
+{
+  "artifact_id": "HIP-GOV-FILE-INVENTORY-002",
+  "version": "0.2",
+  "status": "BASELINE",
+  "generated_for_branch": "architecture/adr-001-core-domain-boundaries",
+  "purpose": "Machine-readable inventory of governed files, roles, descriptions, read priority and source-of-truth relationships.",
+  "files": [
+    {
+      "path": "README.md",
+      "category": "GOV",
+      "artifact_role": "human_entrypoint",
+      "description": "Human-readable overview of thesis, architecture, scope, MVP, NVIDIA track and current repository state.",
+      "status": "ACTIVE",
+      "read_priority": 1,
+      "source_of_truth_for": [
+        "project narrative",
+        "project status summary"
+      ]
+    },
+    {
+      "path": "AGENTS.md",
+      "category": "MEM",
+      "artifact_role": "agent_execution_contract",
+      "description": "Operating rules for Codex and other agents: read order, evidence discipline, architecture changes, security, testing and stop conditions.",
+      "status": "ACTIVE",
+      "read_priority": 0,
+      "source_of_truth_for": [
+        "agent operating behavior"
+      ]
+    },
+    {
+      "path": "assets/architecture/human-intelligence-platform/human-intelligence-platform-overview_v0.1.svg",
+      "category": "ASSET",
+      "artifact_role": "canonical_visual",
+      "description": "Repository-native vector rendering of the current Human Intelligence Platform conceptual architecture.",
+      "status": "BASELINE",
+      "read_priority": 6,
+      "source_of_truth_for": []
+    },
+    {
+      "path": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_DIAGRAM_CONTRACT_v0.1.json",
+      "category": "ARCH",
+      "artifact_role": "semantic_architecture_contract",
+      "description": "Semantic source of truth for architecture layers, nodes, relationships, governance flow and feedback loop.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": [
+        "platform diagram semantics",
+        "architecture node taxonomy"
+      ]
+    },
+    {
+      "path": "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_CONTRACT_v0.1.json",
+      "category": "ARCH",
+      "artifact_role": "digital_twin_semantics_contract",
+      "description": "Defines the minimum semantic components that distinguish Personal and Enterprise Digital Twins from profile databases.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": [
+        "digital twin identity, state, evidence, behavior, governance and relationship semantics"
+      ]
+    },
+    {
+      "path": "contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json",
+      "category": "ARCH",
+      "artifact_role": "digital_twin_reference_architecture",
+      "description": "Extends the core diagram with Personal Digital Twin, Enterprise Digital Twin, Authorized Relationship Layer and nested enterprise twins.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": [
+        "personal-enterprise twin composition and authorized relationship structure"
+      ]
+    },
+    {
+      "path": "contracts/architecture/HUMAN_INTELLIGENCE_PLATFORM_LIFE_DOMAINS_CONTRACT_v0.1.json",
+      "category": "ARCH",
+      "artifact_role": "proposed_domain_model",
+      "description": "Proposes seven human life domains for organizing Personal Digital Twin views; it does not authorize implementation of all domains.",
+      "status": "PROPOSED",
+      "read_priority": 8,
+      "source_of_truth_for": [
+        "proposed personal life-domain organization"
+      ]
+    },
+    {
+      "path": "contracts/architecture/DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json",
+      "category": "ARCH",
+      "artifact_role": "maturity_contract",
+      "description": "Defines maturity levels from profile representation through event-linked, human-in-the-loop and federated Digital Twin systems.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": [
+        "Digital Twin maturity levels and current target assessment"
+      ]
+    },
+    {
+      "path": "contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V2_CONTENT_DESIGN_CONTRACT_v0.1.json",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_contract",
+      "description": "Defines the 16-slide v2 pitch content, claims, evidence states, visuals and architecture alignment rules.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": [
+        "pitch deck v2 content and design execution fields"
+      ]
+    },
+    {
+      "path": "contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V3_CONTENT_DESIGN_CONTRACT_v0.1.json",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_contract",
+      "description": "Superseding pitch content contract for v3; revises slides 1-3 to align the thesis, problem and why-now narrative with Personal Twin, Enterprise Twin, authorized relationships and B2C/B2E/B2B.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": [
+        "pitch deck v3 slides 1-3 content and design execution fields"
+      ]
+    },
+    {
+      "path": "contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V3_CONTENT_DESIGN_CONTRACT_v0.2.json",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_contract",
+      "description": "Reorders the complete v3 pitch into 18 slides so slides 6-8 present Human Twin Core, Evidence Graph and Capability Graph before domain, relationship and governance views.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": [
+        "complete pitch deck v3 slide sequence and content design fields"
+      ]
+    },
+    {
+      "path": "contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V3_CONTENT_DESIGN_CONTRACT_v0.3.json",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_contract",
+      "description": "Complete v3 pitch contract with 19 slides, preserving current deck information and adding permissioned agents, verified progress and a governed pilot-to-ask narrative.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": [
+        "current pitch deck v3 content, slide sequence and evidence states"
+      ]
+    },
+    {
+      "path": "docs/architecture/ADR-002-personal-enterprise-digital-twin-thesis.md",
+      "category": "ARCH",
+      "artifact_role": "architecture_decision",
+      "description": "Records the thesis that Personal and Enterprise Digital Twins are distinct scopes connected by governed relationships.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": [
+        "personal-enterprise twin thesis decision"
+      ]
+    },
+    {
+      "path": "docs/architecture/ADR-003-personal-enterprise-twin-reference-architecture.md",
+      "category": "ARCH",
+      "artifact_role": "architecture_decision",
+      "description": "Records the reference architecture and nested enterprise twin composition.",
+      "status": "BASELINE",
+      "read_priority": 4,
+      "source_of_truth_for": [
+        "personal-enterprise reference architecture decision"
+      ]
+    },
+    {
+      "path": "docs/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V2_CONTENT_PLAN.md",
+      "category": "PITCH",
+      "artifact_role": "presentation_content_plan",
+      "description": "Human-readable plan for the v2 pitch deck narrative, slide order, visual rules and success criteria.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": []
+    },
+    {
+      "path": "prompts/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V2_DESIGN_EXECUTION_PROMPT.md",
+      "category": "PITCH",
+      "artifact_role": "presentation_execution_prompt",
+      "description": "Execution prompt for producing the v2 pitch deck from the approved architecture and content contract.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": []
+    },
+    {
+      "path": "prompts/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V3_DESIGN_EXECUTION_PROMPT_v0.1.md",
+      "category": "PITCH",
+      "artifact_role": "presentation_execution_prompt",
+      "description": "Execution prompt for the complete 19-slide v3 pitch deck using the v3.0.3 content contract.",
+      "status": "DRAFT_FOR_EXECUTION",
+      "read_priority": 8,
+      "source_of_truth_for": []
+    },
+    {
+      "path": "governance/PROJECT_SCOPE_v0.1.md",
+      "category": "GOV",
+      "artifact_role": "scope_contract",
+      "description": "Defines in-scope/out-of-scope boundaries, current MVP, phases, NVIDIA track boundaries and scope-change rules.",
+      "status": "BASELINE",
+      "read_priority": 2,
+      "source_of_truth_for": [
+        "project scope",
+        "MVP boundary",
+        "phase boundaries"
+      ]
+    },
+    {
+      "path": "governance/TAXONOMY_v0.1.json",
+      "category": "GOV",
+      "artifact_role": "taxonomy_registry",
+      "description": "Defines canonical project categories, prefixes, claim classes, maturity states, statuses, sensitivity classes and naming conventions.",
+      "status": "BASELINE",
+      "read_priority": 3,
+      "source_of_truth_for": [
+        "taxonomy",
+        "classification vocabulary"
+      ]
+    },
+    {
+      "path": "governance/VARIABLE_REGISTRY_v0.1.json",
+      "category": "GOV",
+      "artifact_role": "variable_registry",
+      "description": "Tracks important project variables, values, validation status and their source-of-truth artifact.",
+      "status": "BASELINE",
+      "read_priority": 5,
+      "source_of_truth_for": [
+        "project variable state"
+      ]
+    },
+    {
+      "path": "governance/FILE_INVENTORY_v0.1.json",
+      "category": "GOV",
+      "artifact_role": "file_inventory",
+      "description": "Inventory and description of governed repository files with read priority and source-of-truth roles.",
+      "status": "BASELINE",
+      "read_priority": 2,
+      "source_of_truth_for": [
+        "file inventory"
+      ]
+    },
+    {
+      "path": "contracts/product/PLATFORM_STRATEGIC_READINESS_GAP_CONTRACT_v0.1.json",
+      "category": "GOV",
+      "artifact_role": "strategic_readiness_gap_contract",
+      "description": "Cross-maps the strategic platform thesis against missing product, evidence, team, legal, market, NVIDIA workload and execution requirements; defines closure criteria and critical gates.",
+      "status": "BASELINE",
+      "read_priority": 3,
+      "source_of_truth_for": [
+        "strategic readiness gaps",
+        "NVIDIA application preparation backlog",
+        "platform investment gates"
+      ]
+    },
+    {
+      "path": "docs/features/TEAM_APPLICATION_PROFILE_v0.1.md",
+      "category": "GOV",
+      "artifact_role": "team_application_profile",
+      "description": "Canonical internal team profile for the NVIDIA Inception application, including founder technical evidence, second-contact model-administration role and consent checklist.",
+      "status": "READY_FOR_APPLICATION_REVIEW",
+      "read_priority": 3,
+      "source_of_truth_for": [
+        "NVIDIA application team profile",
+        "GAP-012 team evidence and consent status"
+      ]
+    },
+    {
+      "path": "memory/AGENT_MEMORY_MANIFEST_v0.1.json",
+      "category": "MEM",
+      "artifact_role": "context_router",
+      "description": "Task-oriented agent memory manifest mapping topics and task types to the minimum files required for context acquisition.",
+      "status": "BASELINE",
+      "read_priority": 1,
+      "source_of_truth_for": [
+        "agent context routing",
+        "memory acquisition order"
+      ]
+    },
+    {
+      "path": "docs/adr/ADR-001-SHARED-CORE-DOMAIN-BOUNDARIES_v0.1.md",
+      "category": "ARCH",
+      "artifact_role": "proposed_architecture_decision_record",
+      "description": "Proposed additive decision establishing shared-core and permissioned-domain responsibility boundaries. Requires review before acceptance.",
+      "status": "PROPOSED",
+      "read_priority": 4,
+      "source_of_truth_for": [
+        "proposed shared-versus-domain decision rationale and review gate"
+      ]
+    },
+    {
+      "path": "contracts/architecture/HIP_CORE_DOMAIN_BOUNDARY_CONTRACT_v0.1.json",
+      "category": "ARCH",
+      "artifact_role": "proposed_domain_boundary_contract",
+      "description": "Machine-readable proposed boundary responsibilities and invariants under ADR-001; does not supersede architecture baseline.",
+      "status": "DRAFT",
+      "read_priority": 5,
+      "source_of_truth_for": [
+        "proposed core/domain responsibility constraints"
+      ]
+    }
+  ],
+  "inventory_rules": [
+    "Inventory only files that exist or are created in the same governed change.",
+    "Do not list empty planned directories as implemented artifacts.",
+    "Every new governed artifact should be added to the next inventory version.",
+    "Use descriptions to explain purpose, not merely repeat file names."
+  ]
+}
