@@ -214,6 +214,31 @@
       ]
     },
     {
+      "path": "contracts/product/PLATFORM_STRATEGIC_READINESS_GAP_CONTRACT_v0.1.json",
+      "category": "GOV",
+      "artifact_role": "strategic_readiness_gap_contract",
+      "description": "Cross-maps the strategic platform thesis against missing product, evidence, team, legal, market, NVIDIA workload and execution requirements; defines closure criteria and critical gates.",
+      "status": "BASELINE",
+      "read_priority": 3,
+      "source_of_truth_for": [
+        "strategic readiness gaps",
+        "NVIDIA application preparation backlog",
+        "platform investment gates"
+      ]
+    },
+    {
+      "path": "docs/features/TEAM_APPLICATION_PROFILE_v0.1.md",
+      "category": "GOV",
+      "artifact_role": "team_application_profile",
+      "description": "Canonical internal team profile for the NVIDIA Inception application, including founder technical evidence, second-contact model-administration role and consent checklist.",
+      "status": "READY_FOR_APPLICATION_REVIEW",
+      "read_priority": 3,
+      "source_of_truth_for": [
+        "NVIDIA application team profile",
+        "GAP-012 team evidence and consent status"
+      ]
+    },
+    {
       "path": "memory/AGENT_MEMORY_MANIFEST_v0.1.json",
       "category": "MEM",
       "artifact_role": "context_router",

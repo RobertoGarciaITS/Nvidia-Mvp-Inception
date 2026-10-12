@@ -1,0 +1,52 @@
+{
+  "artifact_id": "HIP-GOV-STRATEGIC-READINESS-GAPS-001",
+  "version": "0.1",
+  "status": "BASELINE",
+  "title": "Human Intelligence Platform Strategic Readiness and Gap Contract",
+  "purpose": "Preserve the medium- and long-term strategic platform thesis while recording the work required to convert the architecture into a fundable and NVIDIA Inception-ready early-stage startup.",
+  "strategic_positioning": {
+    "classification": "strategic_technology_platform_with_capex_like_investment_profile",
+    "thesis": "A Human-in-the-Loop Digital Twin platform with reusable infrastructure for identity, consent, events, evidence, capabilities, relationships, permissioned agents and human decisions.",
+    "commercial_sequence": ["B2C beachhead: one Personal Twin decision", "B2E: Enterprise Digital Twin context", "B2B: authorized relationships between people, organizations and twins"],
+    "capex_boundary_note": "CapEx is used as a strategic investment framing for reusable technology assets; accounting and tax treatment requires separate professional confirmation."
+  },
+  "evaluation_basis": {
+    "program": "NVIDIA Inception",
+    "known_public_criteria": ["official incorporation", "less than ten years old", "working website", "at least one developer", "not an excluded organization type", "clear company, product, mission and differentiation"],
+    "current_estimated_acceptance_range": "60-70%",
+    "target_after_critical_gates": "75-85%",
+    "disclaimer": "Internal decision aid, not an NVIDIA score or promise."
+  },
+  "status_vocabulary": {"STRONG": "Supported by an approved artifact.", "PARTIAL": "Concept exists but needs implementation or evidence.", "MISSING": "No reliable evidence recorded.", "TO_VALIDATE": "Requires technical or external validation.", "BLOCKING": "Must close before applying or claiming the related maturity."},
+  "cross_matrix": [
+    {"id":"GAP-001","dimension":"Platform thesis","status":"STRONG","missing":"One executive sentence explaining the reusable asset.","deliverable":"Approved one-sentence thesis for README, website and pitch.","priority":"HIGH"},
+    {"id":"GAP-002","dimension":"Vision versus MVP","status":"PARTIAL","missing":"Separate future platform, 90-day MVP and first validated asset.","deliverable":"Three-layer scope map; every component labeled implemented, MVP, proposed or to validate.","priority":"CRITICAL"},
+    {"id":"GAP-003","dimension":"Architecture interfaces","status":"PARTIAL","missing":"Inputs, outputs and boundaries between core services.","deliverable":"Executable data-flow and API/event contract for the first evidence loop.","priority":"CRITICAL"},
+    {"id":"GAP-004","dimension":"First technological asset","status":"BLOCKING","missing":"Build the first reusable working asset.","deliverable":"Runnable Human Twin Core + Evidence Graph demo.","priority":"BLOCKING"},
+    {"id":"GAP-005","dimension":"Beachhead decision","status":"PARTIAL","missing":"Choose one decision improved for one user and one partner.","deliverable":"Beachhead brief with user, buyer, data, baseline, target and outcome.","priority":"BLOCKING"},
+    {"id":"GAP-006","dimension":"B2C/B2E/B2B sequence","status":"PARTIAL","missing":"Explain the commercial expansion sequence and define B2E project terminology.","deliverable":"Commercial sequencing diagram and terminology note.","priority":"HIGH"},
+    {"id":"GAP-007","dimension":"Product proof","status":"MISSING","missing":"Show a working interface and end-to-end evidence loop.","deliverable":"Demo URL, recording or runnable local demo.","priority":"BLOCKING"},
+    {"id":"GAP-008","dimension":"NVIDIA workload fit","status":"PARTIAL","missing":"Select one workload and measurable NVIDIA hypothesis.","deliverable":"Problem → workload → NVIDIA component → metric → benchmark map.","priority":"BLOCKING"},
+    {"id":"GAP-009","dimension":"Data and evidence","status":"PARTIAL","missing":"Create minimum synthetic or pilot dataset with provenance.","deliverable":"Versioned dataset, schema and traceable claims.","priority":"CRITICAL"},
+    {"id":"GAP-010","dimension":"Consent and authorization","status":"PARTIAL","missing":"Implement grant, scope, revocation and audit behavior.","deliverable":"Consent flow and authorization audit log.","priority":"CRITICAL"},
+    {"id":"GAP-011","dimension":"Governance and privacy","status":"PARTIAL","missing":"Turn claim states into runtime metadata and threat model.","deliverable":"Claim schema, threat model, retention and audit requirements.","priority":"HIGH"},
+    {"id":"GAP-012","dimension":"Team eligibility","status":"PARTIAL","current_state":"The founder, Angel Roberto Garcia Coronado, is the current solopreneur and covers both business and development functions. Dannia Roxana has been added as the second application contact to support administration of the model. The founder CV supports Mechatronics Engineering, Python/Pandas/SQL, applied AI, cloud deployment, governance controls, data modeling and reporting automation.","evidence_source":"MBA-Engineer-RobertoGarcia-oct26.pdf","contacts":[{"name":"Angel Roberto Garcia Coronado","role":"Founder / developer / business lead","email":"robertogarciaits@gmail.com","evidence":"Founder CV","consent_status":"confirmed_by_founder"},{"name":"Dannia Roxana","role":"Model administration support / second application contact","email":"danniadelap@gmail.com","linkedin":"https://www.linkedin.com/in/danniadelap/","consent_status":"confirmed_by_founder_report"}],"portal_contact_arrangement":{"primary":"Angel Roberto Garcia Coronado — founder, developer and business lead","secondary":"Dannia Roxana — model administration support","portal_verification":"pending_live_portal_confirmation"},"missing":"Confirm the documented primary/secondary arrangement in the NVIDIA application portal.","deliverable":"Canonical team application sheet with founder role, technical evidence, model-administration support role, contact ownership, consent status and portal arrangement.","closure_criterion":"At least one developer is explicitly listed, the founder's technical role is evidenced, Dannia Roxana is listed as model-administration support, her consent to appear is confirmed and the portal accepts the arrangement.","priority":"HIGH"},
+    {"id":"GAP-013","dimension":"Website readiness","status":"PARTIAL","missing":"Present company, product, demo, team and contact publicly.","deliverable":"Startup landing page and product/demo page.","priority":"BLOCKING"},
+    {"id":"GAP-014","dimension":"Legal identity","status":"PARTIAL","missing":"Make legal name, date, website, pitch and application consistent.","deliverable":"Canonical legal verification profile.","priority":"HIGH"},
+    {"id":"GAP-015","dimension":"Market and buyer","status":"PARTIAL","missing":"Quantify pain, alternative and buyer for the beachhead.","deliverable":"Market brief with discovery evidence.","priority":"HIGH"},
+    {"id":"GAP-016","dimension":"Metrics and gates","status":"PARTIAL","missing":"Set quantitative product, AI, trust and user-value metrics.","deliverable":"Metric contract with baseline, target, owner and source.","priority":"CRITICAL"},
+    {"id":"GAP-017","dimension":"Digital Twin maturity","status":"PARTIAL","missing":"Evidence the current level and promotion gates.","deliverable":"Maturity assessment tied to observable artifacts.","priority":"HIGH"},
+    {"id":"GAP-018","dimension":"Roadmap and capital logic","status":"PARTIAL","missing":"Connect resources to reusable assets and evidence gates.","deliverable":"90-day, 6-month and 18-month roadmap.","priority":"HIGH"},
+    {"id":"GAP-019","dimension":"Enterprise Twin expansion","status":"TO_VALIDATE","missing":"Select one enterprise object and operational decision.","deliverable":"Enterprise pilot brief reusing the platform core.","priority":"MEDIUM"},
+    {"id":"GAP-020","dimension":"External traction","status":"MISSING","missing":"Obtain pilot, interviews, LOI, users or measurable engagement.","deliverable":"Traction register with source, date and outcome.","priority":"HIGH"}
+  ],
+  "critical_gates": [
+    {"gate_id":"GATE-01","name":"Application eligibility package","must_close":["GAP-012","GAP-013","GAP-014"],"exit_evidence":"Website, legal profile, developer and contact roles."},
+    {"gate_id":"GATE-02","name":"First reusable technology asset","must_close":["GAP-003","GAP-004","GAP-007","GAP-009","GAP-010"],"exit_evidence":"Runnable evidence loop with consent, provenance, capability update and human decision."},
+    {"gate_id":"GATE-03","name":"NVIDIA workload validation","must_close":["GAP-008","GAP-016"],"exit_evidence":"One reproducible benchmark with baseline and candidate NVIDIA path."},
+    {"gate_id":"GATE-04","name":"Strategic platform proof","must_close":["GAP-005","GAP-006","GAP-015","GAP-017","GAP-018","GAP-020"],"exit_evidence":"One validated beachhead showing expansion potential."}
+  ],
+  "next_execution_order":["GAP-012","GAP-013","GAP-005","GAP-004","GAP-007","GAP-009","GAP-010","GAP-008","GAP-016","GAP-020"],
+  "operating_rules":["Do not present proposed architecture as implemented product.","Do not expand to all seven personal domains before validating one.","Every feature maps to a platform layer, decision, evidence source and maturity gate.","Every NVIDIA claim is labeled implemented, candidate or to validate.","Execute the earliest unresolved BLOCKING item first."],
+  "source_of_truth_relationships":["contracts/architecture/PERSONAL_ENTERPRISE_DIGITAL_TWIN_ARCHITECTURE_CONTRACT_v0.2.json","contracts/architecture/DIGITAL_TWIN_MATURITY_CONTRACT_v0.1.json","contracts/presentation/HUMAN_INTELLIGENCE_PLATFORM_PITCH_DECK_V3_CONTENT_DESIGN_CONTRACT_v0.3.json","governance/PROJECT_SCOPE_v0.1.md","README.md"]
+}
